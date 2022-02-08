@@ -40,7 +40,7 @@ The Debian family started with the home user in mind, the community wanted to ma
 
 Distributions such as Arch Linux, openSUSE, SLES, Gentoo, and many others were made for specific use cases or optimisations based on what the community wanted.
 
-![Distributions](./Images/Session%201/Distros.png)
+![Distributions](../imgs/distros.png)
 
 [Here's a link to a more full and HUGE Linux family tree.](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
 ## Why Linux?
