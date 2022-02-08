@@ -80,7 +80,7 @@ The operating system is very modular and customisable, which allows you to creat
 ## Linux Installation(s)
 Here are some of the possible ways to try Linux:
 - Install it on a Virtual Machine.
-- Install it alongside Windows. (how-to: [This](https://github.com/Open-Source-Community/Linux-21-Workshop-Material/tree/main/Session-1/Part-2))
+- Install it alongside Windows.
 - Install it using a Docker Container.
 - Run it from a usb stick.
 - Try it on [Distrotest.net](https://distrotest.net/index.php).
