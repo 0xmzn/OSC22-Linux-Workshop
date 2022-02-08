@@ -13,6 +13,8 @@ Linux has been around since the mid-1990s and has since reached a user-base that
 
 
 Here's an example of a smartwatch running Linux:
+
+<img src="../imgs/smartwatch.jpg" width="100" height="100">
 ![Smartwatch Running Linux](../imgs/smartwatch.jpg)
 
 
