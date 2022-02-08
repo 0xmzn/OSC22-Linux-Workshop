@@ -22,5 +22,6 @@ We just say Linux because it is shorter, easier to say, and more popular.
 
 ![Timeline](../imgs/timeline.png)
 
+**Extras: [History of Operating Systems | تاريخ أنظمة التشغيل](https://www.youtube.com/watch?v=fxXGLMPJnFQ)**
 
 ###
