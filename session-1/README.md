@@ -38,7 +38,7 @@ The Debian family started with the home user in mind, the community wanted to ma
 
 3. **Other distributions built for specific use cases**
 
-Distributions such as Arch Linux, openSUSE, SLES, Gentoo, and many others were made for specific use cases or optimisations based on what the community wanted.
+Distributions such as Arch Linux, Alpine Linux, Gentoo, and many others were made for specific use cases or optimisations based on what the community wanted.
 
 ![Distributions](../imgs/distros.png)
 
