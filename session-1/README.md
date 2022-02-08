@@ -20,5 +20,7 @@ Here's an example of a smartwatch running Linux:
 We just say Linux because it is shorter, easier to say, and more popular.
 ### Where did it come from?
 
+![Timeline](../imgs/timeline.png)
+
 
 ###
