@@ -92,4 +92,4 @@ Throughout our sessions, we will us [Linux Mint](https://linuxmint.com/).
 #### Steps:
 1. Install [Virtualbox](https://www.virtualbox.org/).
 2. Download the [ISO](https://linuxmint.com/download.php).
-3. Install Linux Mint inside a Virtual machine and enjoy :)
+3. Install Linux Mint inside a Virtual machine ([Tutorial](https://linuxhint.com/install_linux_mint_20_virtualbox/)).
