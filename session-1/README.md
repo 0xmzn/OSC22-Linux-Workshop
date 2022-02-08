@@ -77,11 +77,13 @@ The operating system is very modular and customisable, which allows you to creat
 -------------------------------------------------------------------------------------------------------
 # Get yourself a Linux Machine
 
-## Linux Installation(s)
+## Linux Installation
 Here are some of the possible ways to try Linux:
-- Install it on a Virtual Machine.
+- Install it on a Virtual Machine. (what we will use)
 - Install it alongside Windows.
 - Install it using a Docker Container.
 - Run it from a usb stick.
 - Try it on [Distrotest.net](https://distrotest.net/index.php).
+
+
 
