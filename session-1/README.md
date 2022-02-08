@@ -85,5 +85,11 @@ Here are some of the possible ways to try Linux:
 - Run it from a usb stick.
 - Try it on [Distrotest.net](https://distrotest.net/index.php).
 
+Throughout our sessions, we will us [Linux Mint](https://linuxmint.com/).
 
+## Installing Linux Mint
 
+#### Steps:
+1. Install [Virtualbox](https://www.virtualbox.org/).
+2. Download the [ISO](https://linuxmint.com/download.php).
+3. Install Linux Mint inside a Virtual machine and enjoy :)
