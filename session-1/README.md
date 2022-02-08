@@ -22,7 +22,7 @@ We just say Linux because it is shorter, easier to say, and more popular.
 
 ![Timeline](../imgs/timeline.png)
 
-**Extras: [History of Operating Systems | تاريخ أنظمة التشغيل](https://www.youtube.com/watch?v=fxXGLMPJnFQ)**
+**Extras:** [History of Operating Systems | تاريخ أنظمة التشغيل](https://www.youtube.com/watch?v=fxXGLMPJnFQ)
 
 ### Linux Distribution Families
 Since Linux and GNU are both open source, many people from different communities have made different Linux Distributions.
@@ -42,7 +42,7 @@ Distributions such as Arch Linux, openSUSE, SLES, Gentoo, and many others were m
 
 ![Distributions](../imgs/distros.png)
 
-[Here's a link to a more full and HUGE Linux family tree.](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
+**Extras:** [Here's a link to a more full and HUGE Linux family tree.](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
 ## Why Linux?
 
 There are many reasons to use Linux, I’ll name a few but there are always more reasons.
