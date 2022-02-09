@@ -53,40 +53,7 @@ to this:
 <img src="../imgs/vim-cool.png" width="697" height="506">
 
 
-
-## Reading Files
-
-## Using g++ to compile C++ files**
-  
-G++ Compiler or GNU-C++ Compiler is a C++ compiler that follows the ISO C++ standard. Install it by running ``sudo apt install g++``
-
-We can compile C++ files by running g++ followed by the file name, by default an output file will be created by the name a.out which we will use to run our program.
-
-Example: main.cpp
-
-![cpp File Example](../imgs/cppFileExample.png)
-
-``g++ main.cpp``
-
-![Compile](../imgs/compile.png)
-
-Now the file a.out exists, it will be used to run our program. It is marked green as it is executable.
-
-![Run](../imgs/run.png)
-
-
-Note: you can use ‘ ./file ’ to run an executable file from the Linux shell.
-
-**Test Yourself:**
-
-Find an option for g++ to make you choose the name of the output
-file instead of compiling to the default file a.out.
-
-**Solution:**
-
-To change the name of the output file we can use the option ``-o`` followed by the output file name then the c++ file.
-
-**Example:** ```g++ -o output main.cpp```
+# Working on files
 
 ## Input and Output Streams and Redirection
 
