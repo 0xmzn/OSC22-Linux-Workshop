@@ -34,11 +34,21 @@ POSIX systems. Whether you've just installed the operating system, or you've boo
 
 To start using Vim we can simply run it from the terminal by running the command ``vim``.
 
+You can also add a file to open it with Vim. To do so, type `vim <FILE NAME>`. By default, you starting *Visual mode*. To change into insert mode, press the `i` key on your keyboard. Now, you can type like a normal text editor.
+
+After you finish writing, press the `Esc` key to return to *visual mode*.
+
+If you want to save the file, make sure that you're in *visual mode* and press `:` key to get into *command-line mode* and type `w` to write the changes made on your file.
+
+To quit Vim, enter the *command-line mode* and write `q` to quit and `q!` to quit without saving changes.
+
+![exit vim](../imgs/vim-meme.jpeg)
+
 Vim is very configurable and customizable. You can take it from this:
 
 <img src="../imgs/vim.png" width="640" height="360">
 
-to this
+to this:
 
 <img src="../imgs/vim-cool.png" width="697" height="506">
 
@@ -94,7 +104,7 @@ can give the computer orders in the form of commands through the shell we call
 this stdin, an example for stdin will be **ls** or any other command, and the
 computer responds with either stdout or stderr depending on the input.
 
-Running ``ls`` gives nomal output, thus channeled to stdout:
+Running ``ls`` gives normal output, thus channeled to stdout:
 
 ![ls Example](../imgs/lsExample.png)
 
@@ -264,7 +274,7 @@ Let’s have some fun, if you don’t get something from the first time don’t 
         
         f) Write a C++ program that does whatever you want.
         
-        g) Compile the C++ program to prduce an executable called “OSC”.
+        g) Compile the C++ program to produce an executable called “OSC”.
         
         
 2. Permissions and Ownership
