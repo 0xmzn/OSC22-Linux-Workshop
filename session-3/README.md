@@ -57,6 +57,16 @@ to this:
 
 ## Input and Output Streams and Redirection
 
+### Unix Philosophy
+#### "Do One Thing and Do It Well"
+The ideology of doing small pieces of software and connecting them together to form a bigger, more powerful software is what
+makes Unix-like operating system so efficent. This ideology was first developed at AT&T Bell Labs by Doug McIlroy and Ken Thompson.
+
+
+<img src="../imgs/ken.png" width="568" height="760">
+<img src="../imgs/doug.png" width="568" height="760">
+
+
 ### Input and Output Streams
 
 For every program, even operating systems, there is what we call standard input
