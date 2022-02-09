@@ -34,5 +34,5 @@ In your Linux machine, search for "Terminal" and open it to view a terminal.
 
 It should look something like this:
 
-<img src="../imgs/terminal-emulator.png" width="500" height="500">
+<img src="../imgs/terminal-emulator.png">
 
