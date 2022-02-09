@@ -71,7 +71,6 @@ So we can basically summarise it to the following:
 
 ```USERNAME@HOSTNAME:WORKING_DIRECTORY($/#)```
 
-``````
 
 ## The Command Line Syntax
 When ordering the computer to do something, **i.e giving it a command**, you have to take care of the syntax.
@@ -108,5 +107,4 @@ The ```-a``` option lists “all files”, this command can be shortened down to
 
 **Note: Hidden files and directories in Linux start their name with a dot”.”.**
 ![](../imgs/ls-l-a.jpg)
-``````
 
