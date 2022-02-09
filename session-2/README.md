@@ -105,7 +105,7 @@ How about we take a look at the hidden files too?
 
 The ```-a``` option lists “all files”, this command can be shortened down to ```ls -la``` or ```ls -al```
 
-**Note: Hidden files and directories in Linux start their name with a dot”.”.**
+**Note:** Hidden files and directories in Linux start their name with a dot”.”.
 ![](../imgs/ls-l-a.jpg)
 
 # Filesystems
@@ -115,7 +115,7 @@ A filesystem is the way that the files are stored on a storage device (i.e. Hard
 Each operating system uses a certain filesystem:
 ![](../imgs/filesystem.png)
 
-**Note: Linux supports NTFS and FAT32, but Windows doesn’t support EXT4 or XFS, that’s why you can’t see the Linux partitions on Windows.**
+**Note:** Linux supports NTFS and FAT32, but Windows doesn’t support EXT4 or XFS, that’s why you can’t see the Linux partitions on Windows.
 
 ## Windows Directory Structure
 A directory structure is the way an operating system's files are arranged displayed to the user.
@@ -123,7 +123,7 @@ A directory structure is the way an operating system's files are arranged displa
 
 Windows, like every operating system, has a specific directory structure for its **NTFS** file system. Each disk is assigned a letter, and you browse your files based on that. 
 
-**Note: C:\ and D:\ could be 2 separate physical hard drives.**
+**Note:** C:\ and D:\ could be 2 separate physical hard drives.
 
 
 Linux also has a directory structure, called **“Filesystem Hierarchy Standard”** or **“The Linux Filesystem Hierarchy”**.
@@ -143,7 +143,7 @@ root directory.
 From the previous, we can see that: “Everything in Linux is a file”. 
 Even devices and processes, everything is a file under the ‘/’ directory somehow.
 
-**Note: C:\ and D:\ here are not accessed as C:\ or D:\\, but instead as directories under ‘/’.**
+**Note:** C:\ and D:\ here are not accessed as C:\ or D:\\, but instead as directories under ‘/’.
 
 **Let’s test it out!**
 ![](../imgs/ls_root.jpg)
@@ -266,7 +266,7 @@ You can use the arrow keys to navigate the pages and you can hit **q** to quit o
 
 ![](../imgs/man%20page.png)
 
-If you want to search for a specific word you can press slash (/) then type inthe keyword and then press enter.
+If you want to search for a specific word you can press slash (/) then type it on the keyword and press enter.
 
 **Example**: ``/sections`` will make you search for “sections”.
 
@@ -276,9 +276,9 @@ This indeed does bring up the first occurrence of the word ***"sections"***.
 
 ![](../imgs/searched%20words.png)
 
-* Note: You can also use ``info`` and ``--help`` to get information about a command.
+**Note:** You can also use ``info`` and ``--help`` to get information about a command.
 
-**Example**: ```info ls```  and ```ls --help```
+**Example:** ```info ls```  and ```ls --help```
 
 ### Searching for a Command ###
 
@@ -291,11 +291,11 @@ If you need to do a specific task but don’t know which command can do it:
 ![](../imgs/apropos.png)
 
 As you can see, all of these are commands that can rename something.
-Which one youc choose is up to you. You can use man pages to know more about these commands and select the suitable one for your case.
+Which one you choose is up to you. You can use man pages to know more about these commands and select the suitable one for your case.
 
 * You can use ``whatis`` or ``man -f`` to quickly see what a command does
 
-**Example:** ``whatis mv``
+**Example**: ``whatis mv``
 
 ![](../imgs/whatis.png)
 
@@ -311,9 +311,9 @@ By default Linux has 3 types of files:
      - Image file (.png, .jpg)
      - Archive or Compressed file (.zip, .rar)
 2. Directory(d): A folder containing files or folders
-3. Speical:
+3. Special:
      - Block File(b): Hardware files (Like some files under /dev/)
-     - Soft "Symbolic" link file(l): File pointing to anthor file (shortcut)
+     - Soft "Symbolic" link file(l): File pointing to another file (shortcut)
 
 ### Creating Directories
 
@@ -419,11 +419,11 @@ linked to) is moved or removed._
 
 We have a file A.txt if we create a soft link and a hard link both pointing to it and then delete A.txt, the result is visible in the opposite figure.
 
-We can simply say that a soft link is just a file that points to another, while a hard link is a copy of a file that is always sychronised with it.
+We can simply say that a soft link is just a file that points to another, while a hard link is a copy of a file that is always synchronized with it.
 
 ![](../imgs/remove.png)
 
-***Note: You can think of links like pointers in programming languages, if you’re familiar with them.
+**Note:** You can think of links like pointers in programming languages, if you’re familiar with them.
 
 ### Soft “Symbolic” Links ###
 - _A soft link is similar to the file shortcut feature which is used in Windows operating systems._
