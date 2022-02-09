@@ -87,6 +87,49 @@ Here are some of the possible ways to try Linux:
 
 Throughout our sessions, we will us [Linux Mint](https://linuxmint.com/).
 
+-------------------------------------------------------------------------------------------------------
+# Dual Boot VS Live Boot VS Virtual Machine
+
+## Dual Boot
+
+We can partition our hard disk, and install multiple operating systems alongside each other.
+Think of how you have multiple partitions in your Windows (C,D,E,F drives). All your Windows system files would usually be in C (local disk). What if you let go of drive F and decide to install linux file system on it (you can install linux file system on your computer using the **.iso** file that is available for download).
+Now, you will have 3 drives of **Windows format (NTFS)**, and one drive with **Linux format (ext4).** C drive (NTFS), will have Windows installed, and F drive (ext4, and it’s name isn’t really F drive anymore), has Linux.
+But since your computer loads the system files during bootup, it needs to know whether to load files from C drive or from the “formerly F” drive. This is handled by **the bootloader.**
+
+
+## USB Boot
+
+In the above example, we had Windows on our C,D,E,F partitions. The C partition had the system files, while D,E,F had other files. We decided to overwrite F and install linux file system over there. When we wanted to run Windows, we booted from C, and when we wanted to run linux, we booted from the “former F drive” (of course we didn’t know what exactly we are booting for, GRUB handles that for us, we just have to choose).
+So, can we, instead of installing linux on our F drive, install it on an external Hard Disk, and then boot from that external hard disk? The answer is yes.
+You can but 10 USB flash drives, and install 10 different operating systems on each of them, and then plug in whichever one you want, boot from it, and if your OS supports the filesystem of your hard disks, you can use your computers hard disks as well. You actually don’t even need hard disks at all. You can run your computer from a flash drive itself.
+
+
+**In summary,** download the ISO, use a tool to intelligently copy the ISO to a flash drive, plug in the flash drive, and boot from it. It will ask you whether you want to Install the OS, or start running it right away (live boot). Just select the live boot option, and linux is up and running, without any installation. However, since everything happens in volatile primary memory (RAM), changes are lost. So, everytime you boot into the live USB, it would be like running a fresh install (which can be both a good and a bad thing). With persistence mode, even this limitation is overcome, and you can have changes which persist across boots.
+
+
+## Virtual Machine
+
+Suppose you only have Windows on your machine. How do you go from a powered off system to having a fully functional Windows running on your machine. Actually, a more useful question is, what all do you need to go from nothing to functional OS running. Here are a few things we can think of-
+
+- System files that run the OS (or in other words, system files that basically the OS).
+- A small core utility which can load the system files into memory from the hard disk (bootloader) when the computer is presently in a void like situation.
+- Memory where the system files are loaded.
+- Processing power which runs the OS.
+- Hard Disk space, where you can store stuff, Networking so that you can access the internet, and so on.
+
+So, from a powerless state, in the presence of all the above, we can move to a state where we have a functional Windows instance running on our system. The question I want to ask you is, from a state where we have a functional Windows instance running on our system, can we move to a state where we have two functional OSs running on our system?
+The answer should be, why not, if we have all the requirements that can result in a transition from 0 to 1, then if same requirements are met again, we can go from 1 to 2. In other words, if we have-
+
+- System files that run the second OS
+- A different core utility which can load the system files into memory from the hard disk (bootloader) when we have an OS running on the system already 
+- Memory, separate from the already runnning OS’s memory, where the system files of this OS are loaded.
+- Processing power, separately for this OS, which runs the OS.
+- Hard Disk space, separately for this OS, where you can store stuff, Networking so that you can access the internet, and so on.
+
+The above discussion should tell you that it would indeed be possible to run multiple OSs together, by somehow dividing the memory, hard disk space, processor power, etc. into two, and letting both OSs run on their share.
+
+-------------------------------------------------------------------------------------------------------
 ## Installing Linux Mint
 
 #### Steps:
