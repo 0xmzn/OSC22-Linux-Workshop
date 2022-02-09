@@ -187,7 +187,7 @@ The ```.``` link refers to the directory itself.
 
 The ```..``` link refers to the directory before it (parent directory).
 
-Example: If the working directory is /home/osc/Pictures/, then:
+**Example:** If the working directory is /home/osc/Pictures/, then:
 
 ```‘.’ = /home/osc/Pictures/``` and ```‘..’ = /home/osc/``` which is the directory before it.
 
@@ -259,7 +259,7 @@ They’re a set of pages that explain what every command on the system does, wha
 
 **To open a man page type:**`` man [COMMAND NAME]``
 
-**Example**: ``man man``
+**Example:** ``man man``
 
 This will show you the manual of the “man” command.
 You can use the arrow keys to navigate the pages and you can hit **q** to quit or **h** for help.
@@ -268,7 +268,7 @@ You can use the arrow keys to navigate the pages and you can hit **q** to quit o
 
 If you want to search for a specific word you can press slash (/) then type it on the keyword and press enter.
 
-**Example**: ``/sections`` will make you search for “sections”.
+**Example:** ``/sections`` will make you search for “sections”.
 
 ![](../imgs/search%20in%20man%20page.png)
 
@@ -286,7 +286,7 @@ If you need to do a specific task but don’t know which command can do it:
 
 * You can use ``apropos`` or ``man -k`` to search for that command by the keyword of the command.
 
-**Example**: ``man -k "rename"``
+**Example:** ``man -k "rename"``
 
 ![](../imgs/apropos.png)
 
@@ -295,7 +295,7 @@ Which one you choose is up to you. You can use man pages to know more about thes
 
 * You can use ``whatis`` or ``man -f`` to quickly see what a command does
 
-**Example**: ``whatis mv``
+**Example:** ``whatis mv``
 
 ![](../imgs/whatis.png)
 
