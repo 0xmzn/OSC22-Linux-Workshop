@@ -108,3 +108,147 @@ The ```-a``` option lists “all files”, this command can be shortened down to
 **Note: Hidden files and directories in Linux start their name with a dot”.”.**
 ![](../imgs/ls-l-a.jpg)
 
+# Filesystems
+## What is a filesystem?
+A filesystem is the way that the files are stored on a storage device (i.e. Hard Drive, USB Flash Drive, etc..).
+
+Each operating system uses a certain filesystem:
+![](./Images/Session%202/filesystem.png)
+
+**Note: Linux supports NTFS and FAT32, but Windows doesn’t support EXT4 or XFS, that’s why you can’t see the Linux partitions on Windows.**
+
+## Windows Directory Structure
+A directory structure is the way an operating system's files are arranged displayed to the user.
+![](./Images/Session%202/windows_directory_structure.png)
+
+Windows, like every operating system, has a specific directory structure for its **NTFS** file system. Each disk is assigned a letter, and you browse your files based on that. 
+
+**Note: C:\ and D:\ could be 2 seperate physical hard drives.**
+
+
+Linux also has a directory structure, called **“Filesystem Hierarchy Standard”** or **“The Linux Filesystem Hierarchy”**.
+
+
+# Linux Filesystem Hierarchy
+### The root ‘/’ directory
+The ‘/’ directory or the “root” directory is where everything begins on Linux.
+
+No matter what you want to access, where it is, it will somehow connect to the
+root directory.
+
+#### Here’s a demonstration of the Linux Filesystem Hierarchy:
+
+![](../imgs/linux_filesystem.png)
+
+From the previous, we can see that: “Everything in Linux is a file”. 
+Even devices and processes, everything is a file under the ‘/’ directory somehow.
+
+**Note: C:\ and D:\ here are not accessed as C:\ or D:\\, but instead as directories under ‘/’.**
+
+**Let’s test it out!**
+![](../imgs/ls_root.jpg)
+If we list the content of the root directory using the ```ls``` command, we will find the directories in the previous diagram.
+
+Now we know what a filesystem, directory, and file are. Let’s talk about how we can access them.
+
+## Navigating through the filesystem
+
+You opened a terminal, now what?
+The first thing you want to do is to know where the terminal is working:
+
+![](../imgs/pwd.jpg)
+
+```pwd```: Print Working Directory, tells you the directory your terminal is working in.
+
+![](../imgs/ls.jpg)
+
+Now that you know where you are in the system, you should see the content of
+the directory using the ```ls``` command.
+
+What if we wanted to enter the Pictures directory?
+
+![](../imgs/cd.jpg)
+
+```cd```: Change Directory, changes the working directory to the specified argument.
+
+Now the working directory is Pictures, notice how the text before **$** also changed to **~/Pictures** which is the same as **/home/osc/Pictures**, which is the working directory.
+
+What if I wanted to go back to the home directory?
+There are 4 ways:
+* ```cd ~```: This basically means cd /home/osc since ~ means the home directory of the current user.
+* ```cd /home/osc```: Tells the shell to change the working directory to /home/osc.
+* ```cd```: Running the cd command without an argument takes you to the home directory by default.
+* ```cd ..```: .. refers to the parent directory, continue reading:
+
+### The ```.``` and ```..``` Links
+Each directory has 2 hidden files (links) in it, ```.``` and ```..```.
+
+The ```.``` link refers to the directory itself.
+
+The ```..``` link refers to the directory before it (parent directory).
+
+Example: If the working directory is /home/osc/Pictures/, then:
+
+```‘.’ = /home/osc/Pictures/``` and ```‘..’ = /home/osc/``` which is the directory before it.
+
+To verify:
+
+![](../imgs/verify_'.'_and_'..'.jpg)
+
+This can be a little confusing at first, so practice with yourself and maybe try drawing it on a piece of paper to visualise how things really work.
+
+### Relative and absolute paths
+
+Let’s simplify this by taking a guy called “Jack” as an example, Jack goes to FCIS ASU every day, this is the path he takes daily:
+![](../imgs/relative_and_absolute_path.png)
+
+Jack’s route to college daily is **Home->Bus Stop->Abbassia->FCIS ASU.**
+
+If he met someone at Abbassia and asked him: “Where are you going?”, Jack’s response will be **“FCIS ASU”** only, because that’s the next step.
+If someone asked Jack “What’s your full route to college?”, Jack’s response would be **“ Home->Bus Stop->Abbassia->FCIS ASU”.**
+
+**Note that his route from Abbassia is shorter because it is relative to Abbassia.**
+
+The same thing applies in Linux for directories and files.
+
+**Absolute Path:** The total path leading to the directory.
+
+**Relative Path:** The path relative to the working directory.
+
+**Example:**
+In the diagram, let the working directory be /home/User1
+
+![](../imgs/example_absolute_and_relative_path.png)
+
+The relative path for “Videos” would be: Videos
+
+The absolute path would be: /home/User1/Videos
+
+##### Test yourself(Solution at the end):
+In the same diagram, let the working directory be /home/User1 and the user you’re logged in as called User1.
+
+* Which directory does ‘.’ refer to?
+* Which directory does ‘..’ refer to?
+* What would be the working directory if you run ```cd ..```?
+* What would be the working directory if you run ```cd .```?
+* What would be the working directory if you run ```cd``` Videos?
+* What would happen if you run ```cd ../User2/```?
+* What would happen if you run ```cd```?
+* What would happen if you run ```cd User2```?
+* What would happen if you run ```cd /home/User2```?
+
+#
+#
+#
+#
+#
+##### Solution:
+* The directory itself (User1).
+* The parent directory (the directory before it: home).
+* The working directory would be home.
+* The shell will change the directory to the current working directory so nothing will change.
+* The shell will change the working directory to /home/User1/Videos.
+* The shell will change the working directory to /home/User2 (This is the relative path)
+* The shell will change the working directory to /home/User1 as you are logged in as User1, so nothing will change because the working directory is already /home/User1
+* Error, there isn’t a directory called “User2” under the directory “User1”.
+* The shell will change the working directory to /home/User2 (This is the absolute path)
