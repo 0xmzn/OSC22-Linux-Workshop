@@ -87,7 +87,7 @@ Here are some of the possible ways to try Linux:
 
 Throughout our sessions, we will us [Linux Mint](https://linuxmint.com/).
 
--------------------------------------------------------------------------------------------------------
+
 # Dual Boot VS Live Boot VS Virtual Machine
 
 ## Dual Boot
@@ -129,7 +129,7 @@ The answer should be, why not, if we have all the requirements that can result i
 
 The above discussion should tell you that it would indeed be possible to run multiple OSs together, by somehow dividing the memory, hard disk space, processor power, etc. into two, and letting both OSs run on their share.
 
--------------------------------------------------------------------------------------------------------
+
 ## Installing Linux Mint
 
 #### Steps:
