@@ -41,6 +41,10 @@ It should look something like this:
 We have already discussed what a shell is. Shells run inside terminal emulators which means that the terminal won't be useful without a shell running in it.
 The terminal sample showen above is running the *bash* shell.
 
+It looks something like this:
+
+![TTY](../imgs/Linux_shell.jpg)
+
 **Note:** you can run Bash without opening up a terminal emulator. More on that later.
 
 ### Prompt
