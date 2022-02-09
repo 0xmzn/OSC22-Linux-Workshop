@@ -63,8 +63,8 @@ The ideology of doing small pieces of software and connecting them together to f
 makes Unix-like operating system so efficent. This ideology was first developed at AT&T Bell Labs by Doug McIlroy and Ken Thompson.
 
 <p float="left">
-<img src="../imgs/ken.jpg" width="384" height="480">
 <img src="../imgs/doug.jpg" width="384" height="480">
+<img src="../imgs/ken.jpg" width="384" height="480">
 </p>
 
 ### Input and Output Streams
