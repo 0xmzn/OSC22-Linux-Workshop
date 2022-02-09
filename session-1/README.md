@@ -38,7 +38,7 @@ The Debian family started with the home user in mind, the community wanted to ma
 
 3. **Other distributions built for specific use cases**
 
-Distributions such as Arch Linux, Alpine Linux, Gentoo, and many others were made for specific use cases or optimisations based on what the community wanted.
+Distributions such as Arch Linux, Alpine Linux, Gentoo, and many others were made for specific use cases or optimizations based on what the community wanted.
 
 ![Distributions](../imgs/distros.png)
 
@@ -62,15 +62,15 @@ Due to features like package managers, the command line, the operating system be
 
 4. **Free**
 
-GNU/Linux is both free as in freedom and free of charge, it has a lot of great alternatives for proprietary sofrware that people use daily.
+GNU/Linux is both free as in freedom and free of charge, it has a lot of great alternatives for proprietary software that people use daily.
 
-5. **Decentralised Development**
+5. **Decentralized Development**
 
 GNU/Linux isn’t owned by a single company, its development is community driven. People contribute to the Linux kernel and other assets of the GNU operating system.
 
 6. **Customisability**
 
-The operating system is very modular and customisable, which allows you to create your own customised system according to your needs.
+The operating system is very modular and customisable, which allows you to create your own customized system according to your needs.
 
 7. **Much more!**
 
