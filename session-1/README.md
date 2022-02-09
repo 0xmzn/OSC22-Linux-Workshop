@@ -82,7 +82,7 @@ Here are some of the possible ways to try Linux:
 - Install it on a Virtual Machine. (how we will do it)
 - Install it alongside Windows.
 - Install it using a Docker Container.
-- Run it from a usb stick.
+- Run it from a USB stick.
 - Try it on [Distrotest.net](https://distrotest.net/index.php).
 
 Throughout our sessions, we will us [Linux Mint](https://linuxmint.com/).
