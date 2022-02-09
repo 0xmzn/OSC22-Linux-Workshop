@@ -113,13 +113,13 @@ The ```-a``` option lists “all files”, this command can be shortened down to
 A filesystem is the way that the files are stored on a storage device (i.e. Hard Drive, USB Flash Drive, etc..).
 
 Each operating system uses a certain filesystem:
-![](./Images/Session%202/filesystem.png)
+![](../imgs/filesystem.png)
 
 **Note: Linux supports NTFS and FAT32, but Windows doesn’t support EXT4 or XFS, that’s why you can’t see the Linux partitions on Windows.**
 
 ## Windows Directory Structure
 A directory structure is the way an operating system's files are arranged displayed to the user.
-![](./Images/Session%202/windows_directory_structure.png)
+![](../imgs/windows_directory_structure.png)
 
 Windows, like every operating system, has a specific directory structure for its **NTFS** file system. Each disk is assigned a letter, and you browse your files based on that. 
 
