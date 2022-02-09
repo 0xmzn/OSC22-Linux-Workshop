@@ -17,7 +17,7 @@ The shell is the first user-friendly layer that a user can use to interact with 
 
 **Examples:** sh, bash, zsh, csh and fish.
 
-## Shell vs Terminal vs Prompt
+## Terminal vs Shell vs Prompt
 
 ### Terminal
 In the early days of computing, terminals where physical devices connected to a central computer in Universities and Research facilities. 
@@ -36,3 +36,33 @@ It should look something like this:
 
 <img src="../imgs/terminal-emulator.png">
 
+
+### Shell
+We have already discussed what a shell is. Shells run inside terminal emulators which means that the terminal won't be useful without a shell running in it.
+The terminal sample showen above is running the *bash* shell.
+
+**Note:** you can run Bash without opening up a terminal emulator. More on that later.
+
+### Prompt
+When you open the terminal you’ll see something like this:
+
+![prompt1](../imgs/command_line_prompt.jpg) 
+![prompt2](../imgs/command_line_prompt-2.jpg)
+
+It is prompting you to enter a command, let’s break it down:
+
+```osc/root``` : The username of the current logged in user.
+
+```@```: Defines that you are connected to the machine that has the name after it
+
+```mint```: The name of the computer running (Name of the host)
+
+```~```: The working directory, the directoy that the terminal is working in right now.
+
+```$```: States that you are logged in as a regular user.
+
+```#```: States that you are logged in as the system administrator (root).
+
+So we can basically summarise it to the following:
+
+```USERNAME@HOSTNAME:WORKING_DIRECTORY($/#)```
