@@ -70,3 +70,43 @@ It is prompting you to enter a command, let’s break it down:
 So we can basically summarise it to the following:
 
 ```USERNAME@HOSTNAME:WORKING_DIRECTORY($/#)```
+
+``````
+
+## The Command Line Syntax
+When ordering the computer to do something, **i.e giving it a command**, you have to take care of the syntax.
+
+Just like programming languages, the Linux shell has specific syntax that you have to use. Just so that it could be understood by the shell.
+
+The syntax goes as follows:
+![command-line-syntax](../imgs/command_line_syntax.jpg)
+
+**The Command:** Intuitively, this is the command that you give to the system, i.e.
+delete, move, copy, list, etc..
+
+**The Option:** Modifies the action of the command.
+
+**Example:** List “ALL” files, delete “recursively”, show the first “40” lines of a file, delete the file “by force”
+
+**The Arguments:** What you’re going to apply the command to. i.e. Delete (command) a certain file (argument). We can say in short that the options modify the command’s effect on the argument.
+
+#### Let’s take the ls command as an example:
+```ls``` – lists the content of a directory(folder).
+
+Running the command ls does the following:
+![](../imgs/ls_command.jpg)
+
+But that format isn’t really good if you want a detailed view, so we add the ```-l``` option which makes it list the content but in a “long” form:
+
+![](../imgs/ls-l_command.jpg)
+
+Much better! Everything is clealer and organised in a list.
+
+How about we take a look at the hidden files too?
+
+The ```-a``` option lists “all files”, this command can be shortened down to ```ls -la``` or ```ls -al```
+
+**Note: Hidden files and directories in Linux start their name with a dot”.”.**
+![](../imgs/ls-l-a.jpg)
+``````
+
