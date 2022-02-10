@@ -145,6 +145,7 @@ We can use the pipe as many times as we want and to perform multiple commands se
 The figure above illustrates how piping works.
 
 You can do all sort of fun things with pipes. For example: `fortune | cowsay | lolcat`.
+
 `fortune` will print an adage and pipe it to `cowsay` which will draw an ascii art of a cow speaking and then this output will be piped to `lolcat` which will give the output the colorful look.
 
 ![cowsay](../imgs/cowsay.png)
