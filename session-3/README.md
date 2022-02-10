@@ -247,6 +247,8 @@ You can change the ownership of the file by using the command ``chown`` to chang
 
 ## Text Processing & Manipulation
 
+### Creating files
+
 First, let's learn how to create a new empty file from the termainl. To do so, use `touch` command.
 
 `touch foo.txt`
@@ -259,14 +261,27 @@ First, let's learn how to create a new empty file from the termainl. To do so, u
 
 ![write to foo.txt](../imgs/foo.png)
 
+**Note:** There's lots of other ways to create files in Linux. 
+
+### Viewing files
 
 Now, let's view the file by sending its content into `STDOUT`. To do so, use `cat` command.
 ![cat foo](../imgs/catfoo.png)
 
-
-But what if the file was very big that it won't fit in the terminal? Would it be write to use `cat`? 
+But what if the file was too big that it won't fit in the terminal? Would it be write to use `cat`? 
 
 In such cases, we use the `less` command.
 
 Try `cat /var/log/syslog` vs `less /var/log/syslog`. What is the difference?
 
+Another case might be wanting to view the first *n* lines of a file or the last *n* lines. Here, you can use `head` & `tail` commands to get your job done.
+
+To view the first 3 lines of a file you can use:
+
+`cat /etc/passwd | head -n 3` (meh)
+
+`head -n 3 /etc/passwd` (correct way)
+
+Replace `head` with `tail` to view the last 3 lines of a file.
+
+![cat](../imgs/cat-head-tail.jpg)
