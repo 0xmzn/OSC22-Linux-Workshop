@@ -256,6 +256,7 @@ First, let's learn how to create a new empty file from the termainl. To do so, u
 **Question:** How to write "This file is named foo" into `foo.txt` without opening it?
 
 **Solution:**
+
 ![write to foo.txt](../imgs/foo.png)
 
 
