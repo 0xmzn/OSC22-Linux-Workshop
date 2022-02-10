@@ -59,20 +59,24 @@ to this:
 
 ### Unix Philosophy
 #### "Do One Thing and Do It Well"
-The ideology of doing small pieces of software and connecting them together to form a bigger, more powerful software is what
-makes Unix-like operating system so efficent. This ideology was first developed at AT&T Bell Labs by Doug McIlroy and Ken Thompson.
+The ideology of creating small pieces of software and connecting them together to form a bigger, more powerful software is what
+makes Unix-like operating system so efficent. Unix-like OSs is powerful in part because of high composability. 
+This ideology was first developed at AT&T Bell Labs by Doug McIlroy and Ken Thompson under the name of I/O Redirection and Piping. 
 
 <p float="left">
 <img src="../imgs/doug.jpg" width="384" height="480">
 <img src="../imgs/ken.jpg" width="384" height="480">
 </p>
 
+
 ### Input and Output Streams
 
-For every program, even operating systems, there is what we call standard input
-and output streams, they are used to take input from the user “standard
-input(stdin)”, and give the user output “standard output(stdout) and standard
-error(stderr)”.
+All programs launched on the operating systems has three streams:
+- **STDIN:** when the program reads input, it comes from here.
+- **STDOUT:** when the program prints something, it goes here.
+- **STDERR:** a 2nd output the program can choose to use (usually for error messages).
+
+By default, **STDIN** is your keyboard, **STDOUT** and **STDERR** are both your terminal.
 
 ![Stream Diagram](../imgs/streamDiagram.png)
 
