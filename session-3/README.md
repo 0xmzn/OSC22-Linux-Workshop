@@ -244,3 +244,26 @@ You can change the ownership of the file by using the command ``chown`` to chang
 
 ![chgrp example](../imgs/chownExample2.png)
 
+
+## Text Processing & Manipulation
+
+First, let's learn how to create a new empty file from the termainl. To do so, use `touch` command.
+
+`touch foo.txt`
+![touch](../imgs/touch.png)
+
+**Question:** How to write "This file is named foo" into `foo.txt` without opening it?
+**Solution:**
+![write to foo.txt](../imgs/foo.png)
+
+
+Now, let's view the file by sending its content into `STDOUT`. To do so, use `cat` command.
+![cat foo](../imgs/catfoo.png)
+
+
+But what if the file was very big that it won't fit in the terminal? Would it be write to use `cat`? 
+
+In such cases, we use the `less` command.
+
+Try `cat /var/log/syslog` vs `less /var/log/syslog`. What is the difference?
+
