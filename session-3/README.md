@@ -149,9 +149,11 @@ You can do all sort of fun things with pipes. For example: `fortune | cowsay | l
 `fortune` will print an adage and pipe it to `cowsay` which will draw an ascii art of a cow speaking and then this output will be piped to `lolcat` which will give the output the colorful look.
 
 ![cowsay](../imgs/cowsay.png)
+
+**Extras:** [Creating a program that convert man pages into PDFs and preview them in a menu using pipes only](https://www.youtube.com/watch?v=8E8sUNHdzG8)
+
 ## File Permissions
 
-What permissions are
 When we say permissions we usually refer to the type of access a certain user or group can have on a file.
 
 The three permissions we have are:
@@ -242,79 +244,3 @@ You can change the ownership of the file by using the command ``chown`` to chang
 
 ![chgrp example](../imgs/chownExample2.png)
 
-# Test yourself:
-
-Let’s have some fun, if you don’t get something from the first time don’t worry!
-
-1. Nano, reading files, redirection, and compilation
-
-        a) Create a file named file1.txt.
-        
-        b) Use the command “ echo ” to redirect the text “HELLO” into the file.
-        
-        c) Check that the file contains “HELLO” without using nano.
-        
-        d) Edit the file without using a GUI text editor to contain “GOODBYE”.
-        
-        e) Find the line number that contains the word “GOODBYE” without using
-        
-        f) Write a C++ program that does whatever you want.
-        
-        g) Compile the C++ program to produce an executable called “OSC”.
-        
-        
-2. Permissions and Ownership
-
-        a) Create 2 files named filex and filey.
-        
-        b) Create 2 directories named dirx and diry.
-        
-        c) Change the permissions of filex to become NO PERMISSIONS for any of the users, using either of the methods.
-        
-        d) Change the permissions of filey to become (rw)(rx)(wx).
-        
-        e) Change the owner of dirx to root.
-        
-        f) Change the group of diry to root.
-        
-_______
-_______
-_______
-**Solution:**
-
-1. Nano, reading files, redirection, and compilation
-
-        a) touch file1.txt
-        
-        b) echo “HELLO” > file1.txt
-        
-        c) cat file1.txt
-        
-        d) nano file1.txt
-        
-        e) cat -n file1.txt | grep "GOODBYE"
-        
-        f) Just use Nano.
-        
-        g) g++ filename -o OSC
-        
-        
-2. Permissions and Ownership
-
-        a) touch filex filey
-        
-        b) mkdir dirx diry
-        
-        c) chmod 000 filex
-        
-          chmod a= filex
-        
-          chmod u=,g=,o= filex
-        
-        d) chmod 653 filey
-        
-          chmod u=rw,g=rx,o=wx filey
-        
-        e) sudo chown root dirx
-        
-        f) sudo chgrp root diryr
