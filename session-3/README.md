@@ -245,9 +245,9 @@ You can change the ownership of the file by using the command ``chown`` to chang
 ![chgrp example](../imgs/chownExample2.png)
 
 
-## Text Processing & Manipulation
+# Text Processing & Manipulation
 
-### Creating files
+## Creating files
 
 First, let's learn how to create a new empty file from the termainl. To do so, use `touch` command.
 
@@ -263,7 +263,7 @@ First, let's learn how to create a new empty file from the termainl. To do so, u
 
 **Note:** There's lots of other ways to create files in Linux. 
 
-### Viewing files
+## Viewing files
 
 Now, let's view the file by sending its content into `STDOUT`. To do so, use `cat` command.
 ![cat foo](../imgs/catfoo.png)
@@ -285,3 +285,65 @@ To view the first 3 lines of a file you can use:
 Replace `head` with `tail` to view the last 3 lines of a file.
 
 ![cat](../imgs/cat-head-tail.jpg)
+
+## Text Manipulation
+
+When dealing with files through the terminal, you might find yourself in need to prefrom some operation on the text
+to get it in the desired form. Unix-like OSs are very powerful when it comes to text manipulation and filtering.
+
+Let's say that you have a file that looks like this:
+
+```
+8,Steve Bourne,Bourne sh 
+3,Doug Mcilroy,Pipes
+1,Ken Thompson,Unix Operating System
+9,Stuart Feldman,make
+6,Alfred Aho,egrep
+4,Brian Kernighan,AWK Programming Language
+5,Steve Johnson,Yacc
+2,Dennis Ritchie,C Programming Language
+7,Lorinda Cherry,Unix mathematical tools
+```
+
+**NOTE:** This file is a `.csv` file ([comma-separated values](https://en.wikipedia.org/wiki/Comma-separated_values)).
+
+First, let's learn how to sort this file. To do so, I will pipe the content of the file into `sort` command.
+
+![cat sort](../imgs/cat-sort.png)
+
+The `sort` command is used to sort what it recieves from standard input.
+
+Now, our file is sorted. I am thinking about using all uppercase letters instead of uppercase & lowercase in my text.
+
+To get this done, I will use the `tr` command.
+
+![cat sort tr](../imgs/cat-sort-tr.png)
+
+The `tr` command allows you to translate a set of characters into another set of characters.
+
+Moreover, let's show only names of the people who creating programming languages. We need a program that searchs
+for a word, in our case "programming language", and view the line containing this word. This program is `grep`.
+
+![cat sort tr grep](../imgs/cat-sort-tr-grep.png)
+
+For some reason, it didn't work. Can you guess why?
+
+This happened because we are search for "programming language" in lowercase and our output is in uppercase.
+Our workaround is to remove `tr` from the line, right? But we want our output to be in uppercase so we will have to add it again. 
+
+Let's open the man page for `grep` and see if we can find anything. 
+
+![man grep](../imgs/mangrep.png)
+
+Press `/` on your keyboard to invoke the search functionality. Write "case" and hit enter.
+
+![man grep case](../imgs/mangrep-case.png)
+
+The first highlighted instance of "case" keyword shows that using `-i` option will ignore the case of the letters.
+
+Now let's use it on our file
+
+![cat sort tr grep acc](../imgs/cat-sort-tr-grep-acc.png)
+
+It worked!.
+
