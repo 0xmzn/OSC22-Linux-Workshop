@@ -61,7 +61,7 @@ to this:
 #### "Do One Thing and Do It Well"
 The ideology of creating small pieces of software and connecting them together to form a bigger, more powerful software is what
 makes Unix-like operating system so efficient. Unix-like OSs is powerful in part because of high composability. 
-This ideology was first developed at AT&T Bell Labs by Doug McIlroy and Ken Thompson under the name of I/O Redirection and Piping. 
+This ideology was first developed at AT&T Bell Labs by Doug Mcilroy and Ken Thompson under the name of I/O Redirection and Piping. 
 
 <p float="left">
 <img src="../imgs/doug.jpg" width="384" height="480">
@@ -249,7 +249,7 @@ You can change the ownership of the file by using the command ``chown`` to chang
 
 ## Creating files
 
-First, let's learn how to create a new empty file from the termainl. To do so, use `touch` command.
+First, let's learn how to create a new empty file from the terminal. To do so, use `touch` command.
 
 `touch foo.txt`
 
@@ -288,7 +288,7 @@ Replace `head` with `tail` to view the last 3 lines of a file.
 
 ## Text Manipulation
 
-When dealing with files through the terminal, you might find yourself in need to prefrom some operation on the text
+When dealing with files through the terminal, you might find yourself in need to preform some operation on the text
 to get it in the desired form. Unix-like OSs are very powerful when it comes to text manipulation and filtering.
 
 Let's say that you have a file that looks like this:
@@ -311,7 +311,7 @@ First, let's learn how to sort this file. To do so, I will pipe the content of t
 
 ![cat sort](../imgs/cat-sort.png)
 
-The `sort` command is used to sort what it recieves from standard input.
+The `sort` command is used to sort what it receives from standard input.
 
 Now, our file is sorted. I am thinking about using all uppercase letters instead of uppercase & lowercase in my text.
 
@@ -321,7 +321,7 @@ To get this done, I will use the `tr` command.
 
 The `tr` command allows you to translate a set of characters into another set of characters.
 
-Moreover, let's show only names of the people who creating programming languages. We need a program that searchs
+Moreover, let's show only names of the people who creating programming languages. We need a program that searches
 for a word, in our case "programming language", and view the line containing this word. This program is `grep`.
 
 ![cat sort tr grep](../imgs/cat-sort-tr-grep.png)
@@ -355,7 +355,7 @@ The grep command is quite possibly the most common text processing command you w
  
 ### Users
  
-A user is anyone who has access to the system, it could be a user account for a real user (i.e a human) or a system user assosciated with a service or a program.
+A user is anyone who has access to the system, it could be a user account for a real user (i.e a human) or a system user associated with a service or a program.
 The root user is considered the admin of the system and has access to everything.
 You can know any user’s ID and the groups that they’re in by using the command 
 ```
@@ -367,7 +367,7 @@ for example
 
 A userID is a positive integer assigned to the user to identify it.
 Root will have the userID 0.
-After that will be system users that are assosciated with services or
+After that will be system users that are associated with services or
 programs, numbered from 1 up to 999, real user accounts start from the UID 1000.
 
 - UID 0 - Root user
@@ -399,7 +399,7 @@ sudo useradd -m <username>
 
 **Breaking it down**
 
-```sudo```: Needed because you need administrator privilage to create a new a user.
+```sudo```: Needed because you need administrator privilege to create a new a user.
 
 ```useradd```: The command used to add users.
 
@@ -503,9 +503,9 @@ The package manager is responsible for downloading, installing, searching, remov
 
 It consists of high and low level parts.
 
-The **high level** package manager, called *apt* or *apt-get* in Debian-based distributions, it is responsible for searching the repositories and finding the packages, it is also responsible for resolving dependancies.
+The **high level** package manager, called *apt* or *apt-get* in Debian-based distributions, it is responsible for searching the repositories and finding the packages, it is also responsible for resolving dependencies.
 
-A **dependancy** is a package required for another package to work.
+A **dependency** is a package required for another package to work.
 
 For example: The program GIMP requires a toolkit called GTK+ to work, so the package manager automatically installs GTK+ when installing GIMP.
 
@@ -519,7 +519,7 @@ sudo apt install packages_names
 ```
 ![image of package installation](../imgs/install%20package.PNG)
 
-In this example, vim-runtime is considered a dependancy, as vim needs it to work, the package manager notified us that it’ll be installed alongside vim.
+In this example, vim-runtime is considered a dependency, as vim needs it to work, the package manager notified us that it’ll be installed alongside vim.
 
 To remove a package, we use the command
 ```
@@ -539,7 +539,7 @@ sudo apt search <keyword>
 
 As mentioned before, packages are downloaded from repositories, which can be considered a storage for packages. However after a while the packages get updated and maybe new packages are added, the local repository data on your system may get outdated so you need to update the local data.
 
-The command ```apt update``` will update the links inside the repository data file so that when you download or update something from the repository you’ll get the lastest version.
+The command ```apt update``` will update the links inside the repository data file so that when you download or update something from the repository you’ll get the latest version.
 
 As for the command ```apt upgrade``` it upgrades all the packages on your system to their latest versions available in the repositories.
 
@@ -551,7 +551,7 @@ ______
 
 A process is any program that is currently running on the system, you’ll have foreground processes and background processes.
 
-Background processses aren’t seen by the user, this will include things such as update managers, network managers, etc...
+Background processes aren’t seen by the user, this will include things such as update managers, network managers, etc...
 
 Foreground processes are programs that are currently being used by the user, such as Google Chromium, Firefox, GIMP, Codeblocks, etc..
 
@@ -568,7 +568,7 @@ The ```top``` command will tell you all the current processes running in the sys
 
 ![Image of top](../imgs/top.PNG)
 
-If you look at the figure above, you’ll see a command with the PID 1 called systemd, this is the initialisation service responsible for the whole system after booting.
+If you look at the figure above, you’ll see a command with the PID 1 called systemd, this is the initialization service responsible for the whole system after booting.
 
 ### Signals
 
