@@ -132,11 +132,11 @@ As we mentioned before, Linux allows us to manipulate those streams the way we w
 What the pipe does is that it takes any output passed to it then uses it as an input
 for the following command.
 
-Example: ```ls -l | grep “Desktop”```
+Example: ```cat /etc/passwd | tail -n 3```
 
-![Pipe Example](../imgs/pipeExample.png)
+![Passwd Tail](../imgs/passwdTail.png)
 
-Executing this command will first list the directories in the current location and take this output rather than printing it, it passes it to the grep utility to filter out the lines that don’t contain “Desktop”.
+Executing this command will first send the content of the file to **STDOUT** then the pipe will take it and use at as **STDIN** to the `tail -n 3` command which will show the last three lines of the file.
 
 We can use the pipe as many times as we want and to perform multiple commands sequentially with the I/O relations.
 
