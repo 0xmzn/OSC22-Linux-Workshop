@@ -345,5 +345,6 @@ Now let's use it on our file
 
 ![cat sort tr grep acc](../imgs/cat-sort-tr-grep-acc.png)
 
-It worked!.
+It worked!. Now we know who created programming languages among our list.
 
+The grep command is quite possibly the most common text processing command you will use.
