@@ -60,7 +60,7 @@ to this:
 ### Unix Philosophy
 #### "Do One Thing and Do It Well"
 The ideology of creating small pieces of software and connecting them together to form a bigger, more powerful software is what
-makes Unix-like operating system so efficent. Unix-like OSs is powerful in part because of high composability. 
+makes Unix-like operating system so efficient. Unix-like OSs is powerful in part because of high composability. 
 This ideology was first developed at AT&T Bell Labs by Doug McIlroy and Ken Thompson under the name of I/O Redirection and Piping. 
 
 <p float="left">
@@ -144,6 +144,10 @@ We can use the pipe as many times as we want and to perform multiple commands se
 
 The figure above illustrates how piping works.
 
+You can do all sort of fun things with pipes. For example: `fortune | cowsay | lolcat`.
+`fortune` will print an adage and pipe it to `cowsay` which will draw an ascii art of a cow speaking and then this output will be piped to `lolcat` which will give the output the colorful look.
+
+![cowsay](../imgs/cowsay.png)
 ## File Permissions
 
 What permissions are
