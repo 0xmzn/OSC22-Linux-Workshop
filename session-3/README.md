@@ -348,15 +348,52 @@ Now let's use it on our file
 It worked!. Now we know who created programming languages among our list.
 
 The grep command is quite possibly the most common text processing command you will use.
+ 
+# Users and Groups
+ 
+In any traditional operating system, there are users and groups. They exist solely for access and permissions.
+When running a process, it will run as the owner of that process whether that is Jane or Bob.
+File access and ownership is also permission dependent. You wouldn't want Jane to see Bob's documents and vice versa.
 
-# Users, Package Managers, & Intro to Processes
- 
-## Users and Groups
- 
-### Users
- 
-A user is anyone who has access to the system, it could be a user account for a real user (i.e a human) or a system user associated with a service or a program.
-The root user is considered the admin of the system and has access to everything.
+Each user has their own home directory where their user specific files get stored, this is usually located in **/home/username**, but can vary in different distributions.
+
+**The system uses user ids (UID) to manage users, usernames are the friendly way to associate users with identification, but the system identifies users by their UID.**
+
+**The system also uses groups to manage permissions, groups are just sets of users with permission set by that group, they are identified by the system with their group ID (GID**).
+
+In Linux, you'll have users in addition to the normal humans that use the system. Sometimes these users are system daemons that continuously run processes to keep the system functioning. 
+**so the user can be :**
+- a user account for a real user (i.e a human) 
+- a system user associated with a service or a program. 
+
+One of the most important users is **root or superuser**, root is the most powerful user on the system,it is like a guy who has all the powers to add users to del user to create new groups to remove someone from group. To give someone permissions and can also access local files like /etc/shadow /etc/passwd. Whereas user has no powers to modify internal 
+files and also don't have privelege to access some internal files. Also they can't give execute permission to files in root folder.
+For that reason, it can be dangerous to operate as root all the time, you could potentially remove system critical files. 
+
+![Users and Groups](../imgs/User&Group.png)
+
+###  ownership of Linux files:
+
+- **User**: the owner of the file (person who created the file).
+
+- **Group**: the group can contain multiple users. Therefore, all users in that group will have the same permissions. 
+         
+- **Other**: any person has access to that file, that person has neither created the file, nor are they in any group which has access to that file.
+
+- **Root**: who has all the powers to do anything.
+
+**Note:** If root access is needed and a user has root access, they can use sudo command (superuser do) that is used to run a command with root access.
+
+## Usres
+
+#### UserID
+ A userID is a positive integer assigned to the user to identify it:
+
+- UID 0 - Root user
+- UID 1 - 999 - System and Program users
+- UID >= 1000 - Real users
+
+
 You can know any user’s ID and the groups that they’re in by using the command 
 ```
 id <username>
@@ -365,34 +402,27 @@ for example
 
 ![Image of id username](../imgs/username.png)
 
-A userID is a positive integer assigned to the user to identify it.
-Root will have the userID 0.
-After that will be system users that are associated with services or
-programs, numbered from 1 up to 999, real user accounts start from the UID 1000.
 
-- UID 0 - Root user
-- UID 1 - 999 - System and Program users
-- UID >= 1000 - Real users
-
+#### System Users
 The users of the system are stored in the /etc/passwd file.
+
+![Passwd file fields](../imgs/passwdFileFields.png)
+
+![Root passwd file fields](../imgs/rootPasswdFileFields.png)
+
+**lets have a look on /etc/passwd file**
 
 ![Pic of etc/passwd](../imgs/etc.PNG)
 
-Looking at the content of the
-file here, we can see that the
-root user is the first with UID 0.
-We have system users ranging
-from 1 to 120.
-
-Example: lightdm has a UID of
-108, it is a display manager, a system application.
-
-The final 2 lines have the 2 real
-users on the system. Example: Hassan, UID 1000 (First real user created).
+Looking at the content of the file here, we can see that:
+ - the root user is the first with UID 0. 
+ - We have system users ranging from 1 to 120.
+   Example: lightdm has a UID of 108, it is a display manager, a system application.
+ - The final  line have the **first real user created** on the system : Hassan, UID 1000 .
 
 #### Adding and deleting users
 
-To create a user, simply enter the command
+To create a user, simply enter the command:
 ```
 sudo useradd -m <username>
 ```
@@ -405,13 +435,15 @@ sudo useradd -m <username>
 
 ```-m```: An option used to make a home directory for the new user by default.
 
+**Create another user**
+
 If we create a user named temp and check the content of the etc/passwd file
 again:
 
 ![Picture of etc/passwd](../imgs/etc%202.PNG)
 
 
-To delete a user, simply enter the command
+**To delete a user use :**
 ```
 sudo userdel <username>
 ```
@@ -442,13 +474,16 @@ exit
 
 ![image of su 2](../imgs/su%202.PNG)
 
-### Groups
 
-Groups are basically a collection of users, it helps organize user access on the system.
 
-For example: If you’re working for a company, you don’t want the HR to edit the code and at the same time you don’t want the developers to read the HR files.
+## Groups
 
-You’ll put all the HR personnel in a group and give that group access to HR files and deny access to anyone who isn’t in the HR group.
+#### List All Groups
+```
+less /etc/group
+```
+![image of /etc/group](../imgs/etcGroup1.png) 
+![image of /etc/group](../imgs/etcGroup2.png)
 
 #### Adding and Deleting Groups
 
@@ -456,10 +491,19 @@ To create a new group, use the command
 ```
 sudo groupadd <groupname>
 ```
+![image of the new group](../imgs/newGroup.png) 
+
 To delete a group, use the command
 ```
 sudo groupdel <groupname>
 ```
+#### Types of Group
+
+In Linux there are two types of group; 
+
+- **Primary group** – Specifies a group that the operating system assigns to files that are created by the user. Each user must belong to only one primary group.
+
+- **Secondary groups** – Specifies one or more groups to which a user also belongs. A user can be added in multiple secondary groups. (Secondary group is optional.)
 
 #### User Modification
 
@@ -487,9 +531,10 @@ If we want to append the stated groups, we’ll add the a option to append
 ```
 usermod -g prim_group -aG sup_groups user
 ```
+
 _________________________________
 
-## Package managers
+# Package managers
 
 ### Packages and Repositories
 
@@ -545,7 +590,7 @@ As for the command ```apt upgrade``` it upgrades all the packages on your system
 
 ______
 
-## Processes
+# Processes
 
 ### What are Processes
 
