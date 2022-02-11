@@ -536,25 +536,48 @@ _________________________________
 
 # Package managers
 
-### Packages and Repositories
+### Packages and Repositories 
 
-A package in linux is considered to be a collection of files, it can be an application, a program or even documentation. Packages in Linux are stored in repositories where the package manager can easily find, download, and install them.
+A package is essentially an archive file(collection of files) containing the binary executable, configuration file and sometimes information about the dependencies.
+
+A package is usually referred to an application but it could be a GUI application, command line tool , a software library (required by other software programs) or even documentation.  
+
+Linux distributions created their own packaging format to provide the end users ready-to-use binary files (precompiled software) for installing software along with some metadata (version number, description) and dependencies.
+
+Packages in Linux are stored in repositories where the package manager can easily find, download, and install them.
 
 **Repositories** can be considered something like an app store, that has many packages on it, and you choose to install and upgrade packages from it.
 
+
+### Package Dependencies
+
+A package required for another package to work.
+if the dependencies aren't there the package will end up in a broken state and most of the time not even install.
+
+
 ### Package Manager
 
-The package manager is responsible for downloading, installing, searching, removing, and upgrading packages.
+A package manager is a tool that allows users to install, remove, upgrade, configure and manage software packages on an operating system. The package manager can be a graphical application like a software center or a command line tool like apt-get or pacman.
 
 It consists of high and low level parts.
 
-The **high level** package manager, called *apt* or *apt-get* in Debian-based distributions, it is responsible for searching the repositories and finding the packages, it is also responsible for resolving dependencies.
+- The **high level** package manager, called *apt* or *apt-get* in Debian-based distributions, it is responsible for searching the repositories and finding the packages, it is also responsible for resolving dependencies.
 
-A **dependency** is a package required for another package to work.
+   For example: The program GIMP requires a toolkit called GTK+ to work, so the package manager automatically installs GTK+ when installing GIMP.
 
-For example: The program GIMP requires a toolkit called GTK+ to work, so the package manager automatically installs GTK+ when installing GIMP.
+- The **low level manager**, called *dpkg* in Debian-based distributions, is the one responsible for the actual **installation** and **compilation** of the packages.
 
-The **low level manager**, called *dpkg* in Debian-based distributions, is the one responsible for the actual **installation** and **compilation** of the packages.
+### How does the package manager work
+
+![image of how the package manager work](../imgs/PackageManager.png)
+
+Almost all Linux distributions have software repositories which is basically collection of software packages. Yes, there could be more than one repository. The repositories contain software packages of different kind.
+Repositories also have metadata files that contain information about the packages such as the name of the package, version number, description of package and the repository name etc.
+
+Your system’s package manager first interacts with the metadata. The package manager creates a local cache of metadata on your system. When you run the update option of the package manager **(for example apt update)**, it updates this local cache of metadata by referring to metadata from the repository.
+When you run the installation command of your package manager, the package manager refers to this cache. If it finds the package information in the cache, it uses the internet connection to connect to the appropriate repository and downloads the package first before installing on your system.
+A package may have dependencies. Meaning that it may require other packages to be installed. The package manager often takes care of the dependencies and installs it automatically along with the package you are installing.
+
 
 ### Installing and Removing Packages
 
