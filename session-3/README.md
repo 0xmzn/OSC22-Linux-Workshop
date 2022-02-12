@@ -1,4 +1,4 @@
-# Session#3
+# Session 3
 
 # Text Editors, I/O Redirection & Permissions
 

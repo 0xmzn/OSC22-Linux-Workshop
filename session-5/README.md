@@ -1,4 +1,4 @@
-# Session#6
+# Session 5
 
 # Git Version Control
 A Free Open Source DVCS ”distributed version control system ” 
