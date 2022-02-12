@@ -13,11 +13,11 @@ A Free Open Source DVCS ”distributed version control system ”
 
 - ## Stores new versions of files only
 
-    ![N|Solid](./Images/Session%206/saves_new_ver_only.png)
+    ![N|Solid](../imgs/saves_new_ver_only.png)
 
 - ## Each snapshot contains each file
 
-    ![N|Solid](./Images/Session%206/snapshots.png)
+    ![N|Solid](../imgs/snapshots.png)
 
 - ## Everything is local “distributed”
     - Each Computer has all the history of the project
@@ -96,7 +96,7 @@ $ git <command> -h #summarized
 
 ## Recording Changes to the Repository 
 
-![N|Solid](./Images/Session%206/pasted%20image%200.png)
+![N|Solid](../imgs/pasted%20image%200.png)
 
 - ### Checking status of your files
 
@@ -297,20 +297,20 @@ $ git clone <URL>
 - ### Create new branch
 
     - #### git branch testing
-    ![N|Solid](./Images/Session%206/Branching.png)
+    ![N|Solid](../imgs/Branching.png)
         
     - #### switching Branch 
                 - “git checkout testing”
-    ![N|Solid](./Images/Session%206/Switching.png)
+    ![N|Solid](../imgs/Switching.png)
         
     - #### Commiting in a New Branch
-    ![N|Solid](./Images/Session%206/Commiting.png)
+    ![N|Solid](../imgs/Commiting.png)
         
     - #### Return to master Branch   
-    ![N|Solid](./Images/Session%206/Return.png)
+    ![N|Solid](../imgs/Return.png)
     
     - #### Commiting again Branch
-    ![N|Solid](./Images/Session%206/Commiting_agin.png)
+    ![N|Solid](../imgs/Commiting_agin.png)
 
 - ### Switch branches
 
@@ -337,9 +337,9 @@ $ git clone <URL>
 
 ## Remote Branches
      
-![N|Solid](./Images/Session%206/Remote_br.png)
-![N|Solid](./Images/Session%206/Remote_br2.png)
-![N|Solid](./Images/Session%206/Remote_br3.png)
+![N|Solid](../imgs/Remote_br.png)
+![N|Solid](../imgs/Remote_br2.png)
+![N|Solid](../imgs/Remote_br3.png)
 
 ## Local Git Repositories 
 
