@@ -190,3 +190,108 @@ dir and give it the name I gave in as a command line argument.
 Now, my workflow looks like this:
 
 ![clean workflow](../imgs/clean.png)
+
+## **Arithmetic in Bash**
+* **You can do 6 basic arithmetic operators in Bash:**
+  * `a + b` addition (a plus b)
+  * `a - b` subtracting (a minus b)
+  * `a * b` multiplication (a times b)
+  * `a / b` integer division (a divided by b)
+  * `a % b` modulo (the integer remainder of a divided by b)
+  * `a ** b` exponentiation (a to the power of b)
+* **Arithmetics can be done using the expression: $((expression))**
+  * Example: `a=$((5 - 3 + $b))`
+  * Which means: variable `a` is equal `=` to the value of `$()` the expression `(5 - 3 + $b)`
+
+
+## Conditionals in BASH
+If conditions are used to control a program's flow, as in they control what a program does and when.
+![Conditionals](../imgs/Conditionals.png)
+
+- Conditionals in C 
+```C
+if (x == 5)
+{
+    //DoSomething
+}
+```
+```C
+if (x == "String")
+{
+    printf("1");
+}
+else if (x == "String 2")
+{
+    printf("2");
+}
+else
+{
+   printf("3");
+}
+```
+- Conditionals in BASH
+```sh
+if [[ $x -eq 5 ]]
+then
+    #DoSomething
+fi
+```
+> “{“ ‘opening brace’ is roughly equivalent to `then` and “}” ‘closing brace’ is roughly equivalent to `fi`
+
+```sh
+if [[ $x = "String" ]]
+then 
+    echo 1
+elif [[ $x = "String 2" ]]
+then
+    echo 2
+else
+    echo 3
+fi
+```
+
+### Writing conditionals in BASH
+
+- Start a condition with `if [[ condition ]]`
+- The next line contains `then` which is roughly equivalent to `‘{‘`
+- Write the commands that will execute if the condition is true.
+- End your condition with `fi` which is roughly equivalent to `‘}’`
+    - Or start an `elif [[ condition ]]`, with `then` in the line after it.
+        - Write the commands that will execute if the `elif` condition is true.
+        - End your conditionals with `fi`
+    - Or start an `else`, with **NO**  `then` in the line after it.
+        - Write the commands that will execute if the `else` condition is true.
+        - End your conditionals with `fi`
+
+### Conditions
+
+#### Comparing Numerical Variables
+
+Expression in C | Expression in BASH | Evaluates to true when:
+:----------: | :-----------: | :------------:
+`a == b` | `$a -eq $b` | a is equal to b
+`a != b` | `$a -ne $b` | a is not equal to b
+`a < b` | `$a -lt $b` | a is less than b
+`a > b` | `$a -gt $b` | a is greater than b
+`a >= b` | `$a -ge $b` | a is greater than or equal to b
+`a <= b` | `$a -le $b` | a is less than or equal to b
+
+**Another way of comparing numberical values is to use ```((  ))``` instead of ```[[  ]]``` which allows you to use C-like operators.**
+- Example:
+`if [[ $a -eq $b ]]` becomes `if (( a == b ))`
+
+#### Comparing String Variables
+
+Expression in C | Expression in BASH | Evaluates to true when:
+:----------: | :-----------: | :------------:
+`a == b` | `$a = $b` or `$a == $b` | a is the same as b
+`a != b` | `$a != $b` | a is different from b
+`strlen(a) == 0` | `-z $a` | a is empty
+
+#### Combining Conditions
+
+Expression in C | Expression in BASH | Evaluates to true when:
+:----------: | :-----------: | :------------:
+`(cond. A \|\| cond. B)` | `[[ cond. A \|\| cond. B ]]` | A OR B is true
+`(cond. A && cond. B)` | `[[ cond. A && cond. B ]]` | A AND B is true
+`(!cond. A)` | `[[ ! cond. A ]]` | A is false
