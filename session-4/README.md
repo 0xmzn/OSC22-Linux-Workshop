@@ -152,6 +152,6 @@ When we run a program on the command line you would be familiar with supplying a
 
 Let's create a new script that takes three names as command line arguments and print them in reversed order.
 
-![cl args](cl-arg-sh.png)
+![cl args](../imgs/cl-args-sh.png)
 
-![cl args run](cl-args-run.png)
+![cl args run](../imgs/cl-args-run.png)
