@@ -7,7 +7,7 @@ A Free Open Source DVCS ”distributed version control system ”
 
 - ## Snapshots, Not Differences
     - Compares SHA1 sum of modified files.
-    - Saves the new file as a Whole "easier to retrive lost data"
+    - Saves the new file as a Whole "easier to retrieve lost data"
     - Each Snapshot contains references to the files "to save space uses ref. only"
 
 - ## Stores new versions of files only
@@ -20,8 +20,8 @@ A Free Open Source DVCS ”distributed version control system ”
 
 - ## Everything is local “distributed”
     - Each Computer has all the history of the project
-    - Makes it faster and easeir to contribute 
-    - Safer beacuase the data are not onlt on one repo
+    - Makes it faster and easier to contribute 
+    - Safer because the data are not only on one repo
 
 - ## Git has Integrity
     - Everything in Git is CHECKSUMMED "fast ,reliable"
@@ -37,10 +37,10 @@ A Free Open Source DVCS ”distributed version control system ”
 - Staged
 - Committed
 
-# Installtion
+# Installation
 ```sh
 $ sudo apt update
-$ sudo apt intsall git
+$ sudo apt install git
 ```
 
 # First Time Configurations 
@@ -73,8 +73,8 @@ $ git <command> -h #summarized
 ## Create a new repository
 
 ```sh
-    $ git init # Intialize an empty/new repository
-    $ git clone <URL># to Clone/Copy exsiting repository
+    $ git init # Initialize an empty/new repository
+    $ git clone <URL># to Clone/Copy existing repository
 ``` 
 
 `<URL>`: can be git, shh, http, https, file , etc 
@@ -150,8 +150,8 @@ $ git <command> -h #summarized
 
     ``` sh
     $ git status
-    $ git diff #diffreneces between commited  and modified/untracked
-    $ git diff --staged #diffreneces between commited and modified/tracked/staged
+    $ git diff #differences between committed  and modified/untracked
+    $ git diff --staged #differences between committed and modified/tracked/staged
     ```
 
     Example 1
@@ -302,13 +302,13 @@ $ git clone <URL>
                 - “git checkout testing”
     ![N|Solid](../imgs/Switching.png)
         
-    - #### Commiting in a New Branch
+    - #### Committing in a New Branch
     ![N|Solid](../imgs/Commiting.png)
         
     - #### Return to master Branch   
     ![N|Solid](../imgs/Return.png)
     
-    - #### Commiting again Branch
+    - #### Committing again Branch
     ![N|Solid](../imgs/Commiting_agin.png)
 
 - ### Switch branches
