@@ -164,3 +164,29 @@ Command substitution allows use to save the output of a command as a value of a 
 Let's create a new script that lists the contents of `/etc` and counts it. To count an output line by line, we use `wc` command with the `-l` flag. For more information about `wc`, view its man page by excuting `man wc`.
 
 ![ls wc /etc](../imgs/ls-wc.png)
+
+**Fun fact:**
+
+I am currently using command substitution and command line arguments to make my life easir while creating this content. 
+
+Let me explain.
+
+Throughout the process of creating this content, I am constantly taking screenshots of my terminal to add to the workshop content. By default, the
+screenshots are saved in `~/Pictures` directory and I want to move them to `~/repos/Linux-Workshop/imgs` so that I can push them to the github repo
+alongside with the content.
+
+At first, I did this:
+
+![long cmd](long-cmd.png)
+
+which doesn't seem much as first, but it got tedious with repetition so I created a simple script to help me.
+The script is:
+
+![move](../move.png)
+
+And I run it everytime I take a new screenshot. It lists the content of the `~/Pictures` dir and greps the `.png` file. Then, it moves it to the desired
+dir and give it the name I gave in as a command line argument.
+
+Now, my workflow looks like this:
+
+![clean workflow](../clean.png)
