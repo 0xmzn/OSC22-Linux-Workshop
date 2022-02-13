@@ -205,6 +205,9 @@ Now, my workflow looks like this:
 
 
 ## Conditionals in BASH
+
+# If statements
+
 If conditions are used to control a program's flow, as in they control what a program does and when.
 ![Conditionals](../imgs/Conditionals.png)
 
@@ -295,3 +298,38 @@ Expression in C | Expression in BASH | Evaluates to true when:
 `(cond. A \|\| cond. B)` | `[[ cond. A \|\| cond. B ]]` | A OR B is true
 `(cond. A && cond. B)` | `[[ cond. A && cond. B ]]` | A AND B is true
 `(!cond. A)` | `[[ ! cond. A ]]` | A is false
+
+## Case statements
+
+Case statements can be very useful when you need to take a specific path based on a variable matching a series of patterns. You still can use if
+statements but case statements would be cleaner.
+
+```bash
+case <variable> in
+<pattern 1>)
+    <commands>
+    ;;
+<pattern 2>)
+    <other commands>
+    ;;
+esac
+```
+
+For example:
+
+```bash
+case $1 in
+    start)
+        echo starting
+        ;;
+    stop)
+        echo stoping
+        ;;
+    restart)
+        echo restarting
+        ;;
+    *)
+        echo don\'t know
+        ;;
+esac
+```
