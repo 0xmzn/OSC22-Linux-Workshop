@@ -191,7 +191,36 @@ Now, my workflow looks like this:
 
 ![clean workflow](../imgs/clean.png)
 
-## **Arithmetic in Bash**
+## Special Variable Types
+
+### Environment Variables
+* Global system variables accessible by all the processes running under the operating system.
+* Environment variables are useful to store system-wide values such as the directories to search for the executable programs (PATH).
+
+**Variables include:**
+* `BASH_VERSION` Bash version.
+* `HOST_NAME` Host name.
+* `HOME` Home directory.
+* `PATH` Executable locations.
+* `TERM` Default terminal.
+* `SHELL` Default shell.
+* `EDITOR` Default text editor.
+
+### Other Useful Variables
+
+* $0 - The name of the Bash script.
+* $1 - First argument to the Bash script.
+* $# - How many arguments were passed to the Bash script.
+* $@ - All the arguments supplied to the Bash script.
+* $? - The exit status of the most recently run process.
+* $$ - The process ID of the current script.
+* $USER - The username of the user running the script.
+* $HOSTNAME - The hostname of the machine the script is running on.
+* $SECONDS - The number of seconds since the script was started.
+* $RANDOM - Returns a different random number each time is it referred to.
+* $LINENO - Returns the current line number in the Bash script.
+
+## Arithmetic in Bash
 * **You can do 6 basic arithmetic operators in Bash:**
   * `a + b` addition (a plus b)
   * `a - b` subtracting (a minus b)
