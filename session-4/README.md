@@ -106,3 +106,36 @@ Creating a script that does the same thing:
 Running the script:
 
 ![vars script](../imgs/variables-sh.png)
+
+
+#### The Difference between ' ' and " "
+
+* " " -> Interprets what's inside it, including any expressions, variables, etc..
+* ' ' -> Interprets what's inside it literally, without calculating or expanding expressions.
+
+**Example:**
+`x=2`
+
+`echo "$x"`  output->  **2**
+
+`echo $x ` output-> **2**
+
+`echo x`  output -> **x**
+
+`echo 'x'` output-> **x**
+
+`echo '$x'` output-> **$x**
+
+### Taking Input from users
+We can ask the user for input and save it into a variable using `read`. To illustrate, let's create a shell script that asks the user for his username on
+the system and return his users id.
+
+
+![input script](../imgs/input-sh.png)
+
+The script first reads input from user after prompting a question. Then it saves the user's input into a variable. After that, it excutes the `id` commandwith the giving username read from the `name` variable. The `-u` flag used here is to only show the user id of the given user.
+
+![input script run](../imgs/input-run.png)
+
+
+
