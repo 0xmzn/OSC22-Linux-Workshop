@@ -432,3 +432,76 @@ do
 done
 ```
 
+# Functions in BASH
+
+Which do you think is easier and more organised?
+![Function Comparison](../imgs/FunctionsComparison.png)
+
+You may have guessed that B is more organised and easier to write, which is true as it contains the least amount of repeated code.
+
+You can write functions in Bash to organise your code and you can also pass arguments to functions like you can pass them to scripts.
+
+## General Function Syntax
+
+```sh
+function NAME #Function Definition
+{
+     #DoThings
+}
+
+NAME #Function call
+```
+
+- Alternatively:
+```sh
+NAME() #Function Definition
+{
+     #DoThings
+}
+NAME #Function call
+```
+
+- **Example 1:** This is a function that prints "Hello!" 5 times.
+```sh
+function hello 
+{
+    for i in `seq ` 5`
+    do
+        echo "Hello!"
+    done
+}
+
+hello
+```
+![](../imgs/HelloExample.png)
+
+#### Passing arguments to a function
+To use the arguments as variables, you can access their values by using $X where X is the order of the argument passed to the Fn.
+
+- **Example 2:** This is a function that adds 2 numbers.
+```sh
+function add
+{
+    echo $(($1 + $2))
+}
+
+add 3 5
+```
+
+![](../imgs/ArgumentsExample.png)
+
+# The Fork Bomb
+# :(){:|:&};:
+
+Explanation of the fork bomb:
+- We can reorganise the fork bomb to look like this, which is easier to see.
+```sh
+:()        # Create a function named ‘ : ’
+{          # Start of the function body
+    : | :& # Calls itself, once in the foreground and once in the background
+}          # End of the function body
+
+:          # Function call
+```
+
+![ForkBomb](../imgs/ForkBomb.png)
