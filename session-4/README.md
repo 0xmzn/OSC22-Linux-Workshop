@@ -127,6 +127,7 @@ Running the script:
 `echo '$x'` output-> **$x**
 
 ### Taking Input from users
+
 We can ask the user for input and save it into a variable using `read`. To illustrate, let's create a shell script that asks the user for his username on
 the system and return his users id.
 
@@ -137,10 +138,20 @@ The script first reads input from user after prompting a question. Then it saves
 
 ![input script run](../imgs/input-run.png)
 
-Now let's get the same job done more elegantly. You can user `read` with the `-p` flag to prompt the user with a question and take input at the same time.
+Now let's get the same job done more elegantly. You can use `read` with the `-p` flag to prompt the user with a question and take input at the same time.
 
 ![input script elegent](../imgs/input-sh-ele.png)
 
 ![input script elegent](../imgs/input-run-ele.png)
 
+### Taking input from users without variables (Command Line Arguments)
 
+Command line arguments are nothing new to us. We introduced it in the second session when we explained the [command line syntax](https://github.com/mazzensaadd/Linux-Workshop/tree/master/session-2#the-command-line-syntax). Let's recap:
+
+When we run a program on the command line you would be familiar with supplying arguments after it to control its behaviour. For instance we could run the command `ls /etc`. `/etc` is a command line arguments to the command ls. We can do similar with our bash scripts. To do this we use the variables $1 to represent the first command line argument, $2 to represent the second command line argument and so on. These are automatically set by the system when we run our script so all we need to do is refer to them.
+
+Let's create a new script that takes three names as command line arguments and print them in reversed order.
+
+![cl args](cl-arg-sh.png)
+
+![cl args run](cl-args-run.png)
