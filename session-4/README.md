@@ -165,7 +165,7 @@ Let's create a new script that lists the contents of `/etc` and counts it. To co
 
 ![ls wc /etc](../imgs/ls-wc.png)
 
-**Fun fact:**
+**Real Life Application:**
 
 I am currently using command substitution and command line arguments to make my life easir while creating this content. 
 
