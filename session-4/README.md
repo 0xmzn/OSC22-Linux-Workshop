@@ -163,4 +163,4 @@ Command substitution allows use to save the output of a command as a value of a 
 
 Let's create a new script that lists the contents of `/etc` and counts it. To count an output line by line, we use `wc` command with the `-l` flag. For more information about `wc`, view its man page by excuting `man wc`.
 
-![ls wc /etc](ls-wc.png)
+![ls wc /etc](../imgs/ls-wc.png)
