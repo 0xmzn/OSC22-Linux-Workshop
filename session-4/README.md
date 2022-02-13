@@ -177,16 +177,16 @@ alongside with the content.
 
 At first, I did this:
 
-![long cmd](long-cmd.png)
+![long cmd](../imgs/long-cmd.png)
 
 which doesn't seem much as first, but it got tedious with repetition so I created a simple script to help me.
 The script is:
 
-![move](../move.png)
+![move](../imgs/move.png)
 
 And I run it everytime I take a new screenshot. It lists the content of the `~/Pictures` dir and greps the `.png` file. Then, it moves it to the desired
 dir and give it the name I gave in as a command line argument.
 
 Now, my workflow looks like this:
 
-![clean workflow](../clean.png)
+![clean workflow](../imgs/clean.png)
