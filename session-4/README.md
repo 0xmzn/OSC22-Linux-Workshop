@@ -206,7 +206,7 @@ Now, my workflow looks like this:
 
 ## Conditionals in BASH
 
-# If statements
+## If statements
 
 If conditions are used to control a program's flow, as in they control what a program does and when.
 ![Conditionals](../imgs/Conditionals.png)
@@ -299,6 +299,7 @@ Expression in C | Expression in BASH | Evaluates to true when:
 `(cond. A && cond. B)` | `[[ cond. A && cond. B ]]` | A AND B is true
 `(!cond. A)` | `[[ ! cond. A ]]` | A is false
 
+
 ## Case statements
 
 Case statements can be very useful when you need to take a specific path based on a variable matching a series of patterns. You still can use if
@@ -333,3 +334,101 @@ case $1 in
         ;;
 esac
 ```
+
+## Loops in BASH
+
+- Loops are used to repeat a process/commands a certain no. of times.
+- There are 3 types of loops in Bash (for, while, and until).
+- The following slides cover for and while loops only, as until loops are very similar to while and are not used *that* differently.
+
+![Loops](../imgs/Loops.png)
+
+### For Loops
+For loops are said to loop in a certain range/array.
+
+- For Loop in Bash
+```sh
+for VAR in RANGE
+do
+   #SOMETHING
+done
+```
+
+**For Example:**
+
+```sh
+read x
+for i in $(seq 1 $x)
+do
+    echo $i
+done
+```
+
+`seq 1 $x` means “sequence from 1 to the value of x, ‘`$x`’ can be replaced with any other value.
+- Ex: `seq 1 12` or `seq 1 $y`
+
+
+**Tip:**
+
+You can write a for loop in you terminal in one line:
+
+![clean for loop](../imgs/clean-for.png)
+
+### While Loops 
+
+While loops keep repeating a block of commands until the condition becomes false.
+
+- While loop in Bash
+```sh
+while [[ CONDITION ]]
+do
+   #SOMETHING
+done
+```
+
+**For Example:**
+
+```sh
+x=1
+while [[ $x -lt 11 ]]
+do
+    echo $x
+    let x+=1
+done
+```
+
+### Break and Continue statements
+
+- Break
+> When the user enters 0, the code continues to run outside the loop.
+```sh
+while [[ x -lt 10 ]]
+do
+    read i
+    
+    if [[ i -eq 0 ]]
+    then 
+        break
+    fi
+    echo $i
+done
+
+echo "break sent me here"
+```
+
+- Continue
+> When the user enters 0, the code skips the lines of code below it and continues to the next iteration.
+```sh
+while [[ x -lt 10 ]]
+do
+    read i
+    
+    if [[ i -eq 0 ]]
+    then 
+        echo "Skipping the rest of the code!"
+        continue
+    fi
+    echo $i
+done
+```
+
