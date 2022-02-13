@@ -137,5 +137,10 @@ The script first reads input from user after prompting a question. Then it saves
 
 ![input script run](../imgs/input-run.png)
 
+Now let's get the same job done more elegantly. You can user `read` with the `-p` flag to prompt the user with a question and take input at the same time.
+
+![input script elegent](../imgs/input-sh-ele.png)
+
+![input script elegent](../imgs/input-run-ele.png)
 
 
