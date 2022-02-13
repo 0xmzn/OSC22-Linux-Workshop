@@ -155,3 +155,12 @@ Let's create a new script that takes three names as command line arguments and p
 ![cl args](../imgs/cl-args-sh.png)
 
 ![cl args run](../imgs/cl-args-run.png)
+
+
+### Command Substitution
+
+Command substitution allows use to save the output of a command as a value of a variable. To do so, we place the command that we want to save the output of in *brackets*, preceded by *$*:
+
+Let's create a new script that lists the contents of `/etc` and counts it. To count an output line by line, we use `wc` command with the `-l` flag. For more information about `wc`, view its man page by excuting `man wc`.
+
+![ls wc /etc](ls-wc.png)
