@@ -1,4 +1,4 @@
-# Session 5
+# Session 4
 
 # Shell Scripting
 
@@ -92,3 +92,17 @@ Variables names are case-sensitive and can't start with a number, but can start 
   * `x=text\ with\ spaces` -> value of x = "text with spaces"
 * `varname` -> refers to the variable.
 * `$varname` -> refers to the value of the variable.
+
+**Examples:**
+
+Assigning variables and using them on command line:
+
+![Vars on CL](../imgs/vars-cl.png)
+
+Creating a script that does the same thing:
+
+![nano vars](../imgs/nano-vars.png)
+
+Running the script:
+
+![vars script](../imgs/variables-sh.png)
