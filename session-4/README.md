@@ -131,11 +131,11 @@ We can ask the user for input and save it into a variable using `read`. To illus
 the system and return his users id.
 
 
-![input script](../imgs/input-shpng)
+![input script](../imgs/input-sh.png)
 
 The script first reads input from user after prompting a question. Then it saves the user's input into a variable. After that, it excutes the `id` commandwith the giving username read from the `name` variable. The `-u` flag used here is to only show the user id of the given user.
 
-![input script run](../imgs/input-runpng)
+![input script run](../imgs/input-run.png)
 
 
 
