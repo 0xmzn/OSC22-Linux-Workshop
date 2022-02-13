@@ -3,7 +3,7 @@
 # Shell Scripting
 
 ## What are Shell Scripts?
-Shell scripts are plain text files that contains a series of commands that will be excuted when the user runs the script. 
+Shell scripts are plain text files that contains a series of commands that will be executed when the user runs the script. 
 An important note is that anything you can run normally on the command line can be put into a script and it will do exactly the same thing and vice versa.
 
 It is convention to give a script the **(.sh)** extension. This is not a must since Linux is a extensionless system. You can give it whatever extension
@@ -35,17 +35,17 @@ use `nano`:
 
 ![first script](../imgs/nano-script.png)
 
-After saving this file, we now have our first shell script. To excute it, we first need to make it excutable. To do so, use the `chmod` command:
+After saving this file, we now have our first shell script. To execute it, we first need to make it executable. To do so, use the `chmod` command:
 
 `$ chmod +x first-script.sh`
 
-Now our script is excutable. To run it, prepend its name with `./` and press enter:
+Now our script is executable. To run it, prepend its name with `./` and press enter:
 
 `$ ./first-script.sh`
 
 ![first script running](../imgs/hello-script.png)
 
-### Let's break the everythin down
+### Let's break the everything down
 
 #### The script
 
@@ -64,7 +64,7 @@ as expected.
 
 #### Why adding ./
 
-This helps bash knowing you are excuting this exact script that is found in the current working directory. On the other hand, when you run a command like `ls`, you don't add `./` because Bash knows where to find it. You can replace `./` with the full path of the script, `/tmp/scripts/first-script.sh` in my case. You also can do the same thing with system commands like `/usr/bin/ls`
+This helps bash knowing you are executing this exact script that is found in the current working directory. On the other hand, when you run a command like `ls`, you don't add `./` because Bash knows where to find it. You can replace `./` with the full path of the script, `/tmp/scripts/first-script.sh` in my case. You also can do the same thing with system commands like `/usr/bin/ls`
 
 ![full path](../imgs/full-path-commands.png)
 
@@ -75,10 +75,10 @@ A variable is a temporary store for a piece of information. There are two action
 * Setting a value for a variable.
 * Reading the value for a variable.
 
-You can assign variables in various way. For instace, the most common way it to set the value of a variable directly after creating it. You can also save the output of a command into a varaible (more on that later).
+You can assign variables in various way. For instance, the most common way it to set the value of a variable directly after creating it. You can also save the output of a command into a variable (more on that later).
 
 When reading a variable, we place `$` before its name to tell Bash that this word is a variable. This can be very useful when dealing with text bodies.
-Before a line is excuted, Bash replaces every variable prepended by `$` with its actual value. This process is repeated for every line in the script.
+Before a line is executed, Bash replaces every variable prepended by `$` with its actual value. This process is repeated for every line in the script.
 
 Variables names are case-sensitive and can't start with a number, but can start with an underscore.
 * To assign a value to a variable:
@@ -134,21 +134,21 @@ the system and return his users id.
 
 ![input script](../imgs/input-sh.png)
 
-The script first reads input from user after prompting a question. Then it saves the user's input into a variable. After that, it excutes the `id` commandwith the giving username read from the `name` variable. The `-u` flag used here is to only show the user id of the given user.
+The script first reads input from user after prompting a question. Then it saves the user's input into a variable. After that, it executes the `id` command with the giving username read from the `name` variable. The `-u` flag used here is to only show the user id of the given user.
 
 ![input script run](../imgs/input-run.png)
 
 Now let's get the same job done more elegantly. You can use `read` with the `-p` flag to prompt the user with a question and take input at the same time.
 
-![input script elegent](../imgs/input-sh-ele.png)
+![input script elegant](../imgs/input-sh-ele.png)
 
-![input script elegent](../imgs/input-run-ele.png)
+![input script elegant](../imgs/input-run-ele.png)
 
 ### Taking input from users without variables (Command Line Arguments)
 
 Command line arguments are nothing new to us. We introduced it in the second session when we explained the [command line syntax](https://github.com/mazzensaadd/Linux-Workshop/tree/master/session-2#the-command-line-syntax). Let's recap:
 
-When we run a program on the command line you would be familiar with supplying arguments after it to control its behaviour. For instance we could run the command `ls /etc`. `/etc` is a command line arguments to the command ls. We can do similar with our bash scripts. To do this we use the variables $1 to represent the first command line argument, $2 to represent the second command line argument and so on. These are automatically set by the system when we run our script so all we need to do is refer to them.
+When we run a program on the command line you would be familiar with supplying arguments after it to control its behavior. For instance we could run the command `ls /etc`. `/etc` is a command line arguments to the command ls. We can do similar with our bash scripts. To do this we use the variables $1 to represent the first command line argument, $2 to represent the second command line argument and so on. These are automatically set by the system when we run our script so all we need to do is refer to them.
 
 Let's create a new script that takes three names as command line arguments and print them in reversed order.
 
@@ -161,13 +161,13 @@ Let's create a new script that takes three names as command line arguments and p
 
 Command substitution allows use to save the output of a command as a value of a variable. To do so, we place the command that we want to save the output of in *brackets*, preceded by *$*:
 
-Let's create a new script that lists the contents of `/etc` and counts it. To count an output line by line, we use `wc` command with the `-l` flag. For more information about `wc`, view its man page by excuting `man wc`.
+Let's create a new script that lists the contents of `/etc` and counts it. To count an output line by line, we use `wc` command with the `-l` flag. For more information about `wc`, view its man page by executing `man wc`.
 
 ![ls wc /etc](../imgs/ls-wc.png)
 
 **Real Life Application:**
 
-I am currently using command substitution and command line arguments to make my life easir while creating this content. 
+I am currently using command substitution and command line arguments to make my life easier while creating this content. 
 
 Let me explain.
 
@@ -184,7 +184,7 @@ The script is:
 
 ![move](../imgs/move.png)
 
-And I run it everytime I take a new screenshot. It lists the content of the `~/Pictures` dir and greps the `.png` file. Then, it moves it to the desired
+And I run it every time I take a new screenshot. It lists the content of the `~/Pictures` dir and greps the `.png` file. Then, it moves it to the desired
 dir and give it the name I gave in as a command line argument.
 
 Now, my workflow looks like this:
@@ -279,7 +279,7 @@ Expression in C | Expression in BASH | Evaluates to true when:
 `a >= b` | `$a -ge $b` | a is greater than or equal to b
 `a <= b` | `$a -le $b` | a is less than or equal to b
 
-**Another way of comparing numberical values is to use ```((  ))``` instead of ```[[  ]]``` which allows you to use C-like operators.**
+**Another way of comparing numerical values is to use ```((  ))``` instead of ```[[  ]]``` which allows you to use C-like operators.**
 - Example:
 `if [[ $a -eq $b ]]` becomes `if (( a == b ))`
 
@@ -324,7 +324,7 @@ case $1 in
         echo starting
         ;;
     stop)
-        echo stoping
+        echo stopping
         ;;
     restart)
         echo restarting
@@ -434,12 +434,12 @@ done
 
 # Functions in BASH
 
-Which do you think is easier and more organised?
+Which do you think is easier and more organized?
 ![Function Comparison](../imgs/FunctionsComparison.png)
 
-You may have guessed that B is more organised and easier to write, which is true as it contains the least amount of repeated code.
+You may have guessed that B is more organized and easier to write, which is true as it contains the least amount of repeated code.
 
-You can write functions in Bash to organise your code and you can also pass arguments to functions like you can pass them to scripts.
+You can write functions in Bash to organize your code and you can also pass arguments to functions like you can pass them to scripts.
 
 ## General Function Syntax
 
@@ -494,7 +494,7 @@ add 3 5
 # :(){:|:&};:
 
 Explanation of the fork bomb:
-- We can reorganise the fork bomb to look like this, which is easier to see.
+- We can reorganize the fork bomb to look like this, which is easier to see.
 ```sh
 :()        # Create a function named ‘ : ’
 {          # Start of the function body
