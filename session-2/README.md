@@ -468,3 +468,61 @@ And since a link is a file after all, you can also delete it with ```rm```.
 **Example:**
 
 ![](../imgs/remove%20link.png)
+
+----------------------------------------
+## SSH ( Secure Shell )
+
+SSH is a network communication protocol that allows users to securely access remote computers and servers. It is often used to "login" and perform operations on remote computers but it may also be used for transferring data.
+
+An inherent feature of ssh is that the communication between the two computers is **encrypted** meaning that it is suitable for use on insecure networks.
+
+![i will find you and i will ssh you](../imgs/i-will-find-you-and-i-will-ssh-you.jpg)
+
+### Syntax:
+````
+ssh user_name@host(IP/Domain_name)
+````
+**Break it down :**
+- **ssh** : instructs the system to establish an encrypted secure connection with the host machine.
+- **user_name:** represents the account that is being accessed on the host.
+- **host:** refers to the machine which can be a computer or a router that is being accessed. It can be an IP address (e.g. 192.168.33.1) or domain name(e.g. www.domainname.com).
+
+**Note:** After logging into the host computer, commands will work as if they were written directly to the host terminal.
+
+**Example:** Accessing parrot machine (linux distro) via windows10 command prompt using ssh to make a new file
+
+![Open SSH](../imgs/OpenSSH.png)
+
+![How do you do that](../imgs/HowHowComic.jpg)
+ 
+   - The SSH client is a part of Windows 10, but it’s an “optional feature” that isn’t installed by default. 
+   
+      **How to install it?** 
+   
+      ![still using windows](../imgs/stillUsingWin.jpg)
+   
+   - Linux has SSH clients installed and disabled by default so to display ssh status :
+   
+      ```
+      sudo service ssh status
+      ```
+      ![inactive SSH](../imgs/inactiveSSH.png)
+  
+   
+      to activate the SSH :
+      ```
+      sudo systemctl start ssh
+      ```
+     now let's check the status again :
+     ![active SSH](../imgs/activeSSH.png)
+     
+     so know you can **ssh user_name@host(IP/Domain_name)**
+   
+     to deactivate the SSH :
+     ```
+     sudo service ssh stop
+     ```
+   --------------
+   
+   ### Let's Play with [Bandit](https://overthewire.org/wargames/bandit/)
+
