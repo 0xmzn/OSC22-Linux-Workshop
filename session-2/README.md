@@ -501,27 +501,37 @@ ssh user_name@host(IP/Domain_name)
    
       ![still using windows](../imgs/stillUsingWin.jpg)
    
-   - Linux has SSH clients installed and disabled by default so to display ssh status :
+   - Linux has SSH clients installed by default so to enable ssh on :
+   
+      ```
+      sudo apt install openssh-server
+      ```
+    
+      display ssh status :
    
       ```
       sudo service ssh status
       ```
-      ![inactive SSH](../imgs/inactiveSSH.png)
-  
+      
+      ![active SSH](../imgs/activeSSH.png)
+      
+      so now you can **ssh user_name@host(IP/Domain_name)**
+      
    
+      to deactivate the SSH :
+      
+      ```
+      sudo service ssh stop
+      ```
+     
       to activate the SSH :
+      
       ```
       sudo systemctl start ssh
       ```
      now let's check the status again :
      ![active SSH](../imgs/activeSSH.png)
      
-     so know you can **ssh user_name@host(IP/Domain_name)**
-   
-     to deactivate the SSH :
-     ```
-     sudo service ssh stop
-     ```
    --------------
    
    ### Let's Play with [Bandit](https://overthewire.org/wargames/bandit/)
