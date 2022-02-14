@@ -491,47 +491,8 @@ ssh user_name@host(IP/Domain_name)
 
 **Example:** Accessing parrot machine (linux distro) via windows10 command prompt using ssh to make a new file
 
-![Open SSH](../imgs/OpenSSH.png)
+![Open SSH](../imgs/OpenSSH.png)    
 
-![How do you do that](../imgs/HowHowComic.jpg)
- 
-   - The SSH client is a part of Windows 10, but it’s an “optional feature” that isn’t installed by default. 
-   
-      **How to install it?** 
-   
-      ![still using windows](../imgs/stillUsingWin.jpg)
-   
-   - Linux has SSH clients installed by default so to enable ssh on :
-   
-      ```
-      sudo apt install openssh-server
-      ```
-    
-      display ssh status :
-   
-      ```
-      sudo service ssh status
-      ```
-      
-      ![active SSH](../imgs/activeSSH.png)
-      
-      so now you can **ssh user_name@host(IP/Domain_name)**
-      
-   
-      to deactivate the SSH :
-      
-      ```
-      sudo service ssh stop
-      ```
-     
-      to activate the SSH :
-      
-      ```
-      sudo systemctl start ssh
-      ```
-     now let's check the status again :
-     ![active SSH](../imgs/activeSSH.png)
-     
    --------------
    
    ### Let's Play with [Bandit](https://overthewire.org/wargames/bandit/)
