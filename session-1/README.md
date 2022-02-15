@@ -1,10 +1,50 @@
 # Session 1
 
 # A Glimpse on Linux History & Introduction to Operating Systems
-## What is an operating system?
-An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs.
+## Operating system
+It is a system program that provides interface between user and computer. OS manages all of the software and hardware on the computer. Most of the time, there are several different computer programs running at the same time, and they all need to access your computer's central processing unit (CPU), memory, and storage. The operating system coordinates all of this to make sure each program gets what it needs.
 
 **Examples:** Unix, Minix, Linux, macOS and Microsoft Windows.
+
+## Kernel
+A kernel is the core component of an operating system. 
+It is the first program of operating system that is loaded into the main memory to start the working of the system. Kernel remains in the main memory till the system is shut down. 
+
+Kernel acts as a bridge between application software and hardware of the system. Kernel directly communicates with the hardware and  let it know what the application software has requested. 
+
+**That is how Kernel works:**
+
+**Example 1:**
+
+- Unlocking my phone with a fingerprint scanner:
+   - I’ll place my finger on the scanner
+   - The Hardware (Scanner) will tell the kernel that a fingerprint has been recognized.
+   - Now, the kernel will tell the Software to diagnose whether it is correct or not.
+   - If my fingerprint is diagnosed as correct, my phone will start.
+   
+**Example 2:**
+
+- Recording a video
+  - As soon as I press the Camera application on my phone, the software will tell that to the kernel.
+  - Kernel will immediately ask Camera lens and Microphone inside my phone to wake up and start working.
+  - Now, both S/W and H/W will work together happily.
+
+![OS-Kernel](../imgs/OS-Kernel.png)
+
+
+**Conclusion**
+
+An operating system is an important software, and it is impossible to run a system without an operating system. Kernel is an important program in operating system and without kernel operating system won’t work.
+
+## An overview of the boot process
+
+**BIOS** is literally the first piece of (programmable) software that run on the CPU when the power button is pushed. It can be described as a bootloader for other bootloaders that have to be initialized before we can even search for the bootloader (e.g. grub).
+
+**Boot loader** is a program which is called by BIOS. Boot loader is the one who exactly Knows(memory location) where the Kernel image is so it (the bootloader) finds and load the OS kernel into memory and executes that.
+
+**The task of the boot loader is have to find the boot file of the operating systems and initiate the boot file to load the operating system.**
+
+![startup-process](../imgs/startup-process.jpg)
 
 ## What is Linux?
 Linux has been around since the mid-1990s and has since reached a user-base that spans the globe. Linux is actually everywhere: It's in your phones, your thermostats, in your cars, refrigerators, and televisions. It also runs most of the Internet, all of the world’s top 500 supercomputers, and the world’s stock exchanges.
@@ -18,6 +58,7 @@ Here's an example of a smartwatch running Linux:
 
 **Note:** The *correct term* is GNU/Linux not just Linux or GNU, because it is the GNU operating system using the Linux kernel. 
 We just say Linux because it is shorter, easier to say, and more popular.
+
 ### Where did it come from?
 
 ![Timeline](../imgs/timeline.png)
