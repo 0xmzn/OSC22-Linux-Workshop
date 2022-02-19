@@ -126,7 +126,7 @@ Here are some of the possible ways to try Linux:
 - Run it from a USB stick.
 - Try it on [Distrotest.net](https://distrotest.net/index.php).
 
-Throughout our sessions, we will us [Linux Mint](https://linuxmint.com/).
+Throughout our sessions, we will us [Pop!_OS](https://pop.system76.com/).
 
 
 # Dual Boot VS Live Boot VS Virtual Machine
@@ -171,9 +171,9 @@ The answer should be, why not, if we have all the requirements that can result i
 The above discussion should tell you that it would indeed be possible to run multiple OSs together, by somehow dividing the memory, hard disk space, processor power, etc. into two, and letting both OSs run on their share.
 
 
-## Installing Linux Mint
+## Installing Pop!_OS
 
 #### Steps:
 1. Install [Virtualbox](https://www.virtualbox.org/).
-2. Download the [ISO](https://linuxmint.com/download.php).
-3. Install Linux Mint inside a Virtual machine ([Tutorial](https://linuxhint.com/install_linux_mint_20_virtualbox/)).
+2. Download the [ISO](https://pop.system76.com/).
+3. Install Pop!_OS inside a Virtual machine ([Tutorial](https://support.system76.com/articles/install-in-vm/)).
