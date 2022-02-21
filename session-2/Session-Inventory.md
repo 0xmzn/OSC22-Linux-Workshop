@@ -62,13 +62,20 @@
 | `cat <file names>` | Concatenate files and print on the standard output|
 
 
+# Working with Directories
+  
+|Command|Description|
+|---|---|
+| `mkdir` | Create a directory|
+| `mkdir -p Directory1/Directory2/Directory3`| To create subdirectories at the same time|
+
 # Copy
   
 |Command|Description|
 |---|---|
 | `cp <source file> <destination file>` | To copy files|
 | `cp -r <source directory> <destination directory>` | this will recursively copy the files and directories within a directory.|
-| `cp -i`  <br> `mv -i`| to prompt you before overwriting a file.|
+| `cp -i`| to prompt you before overwriting a file.|
 
 
 
@@ -81,12 +88,6 @@
 |`mv file_1 file_2 /somedirectory`| To move more than one file|
 |`mv -b directory1 directory2`| to mv a file to overwrite the previous one and also make a backup of that file and it will just rename the old version with a ~.|
 
-# Working with Directories
-  
-|Command|Description|
-|---|---|
-| `mkdir` | Create a directory|
-| `mkdir -p Directory1/Directory2/Directory3`| To create subdirectories at the same time|
 
 # Remove
 |Command|Description|
