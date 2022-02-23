@@ -424,7 +424,7 @@ Looking at the content of the file here, we can see that:
 
 To create a user, simply enter the command:
 ```
-sudo useradd -m <username>
+sudo useradd -ms /bin/bash -c "user role" <username>
 ```
 
 **Breaking it down**
