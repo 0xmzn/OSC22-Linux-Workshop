@@ -435,6 +435,10 @@ sudo useradd -ms /bin/bash -c "user role" <username>
 
 ```-m```: An option used to make a home directory for the new user by default.
 
+```-s```: to spacify the type of shell when this user login.
+
+```-c```: An option to spacify user's role.
+
 **Create another user**
 
 If we create a user named temp and check the content of the etc/passwd file
