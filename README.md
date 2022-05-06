@@ -38,7 +38,7 @@ Here is a list of all of the content and their summaries.
 
 ## Contributers
 - [OSC19 Linux Workshop](https://github.com/Open-Source-Community/OSC19-Linux-Workshop-Sessions)
-- Mazen Saad
-- Salma Ayman
+- [Mazen Saad](https://github.com/mazzensaadd)
+- [Salma Ayman](https://github.com/SalmaAlassal)
 
 
